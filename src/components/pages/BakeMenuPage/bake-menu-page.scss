@@ -1,0 +1,40 @@
+.bake-menu-page {
+    .bake-menu-desc {
+        margin: 20px 6vw;
+
+        p {
+            font-family: Cormorant;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: right;
+            letter-spacing: 0.04em;
+        }
+
+        hr {
+            margin: 40px 0;
+            height: 0;
+        }
+
+        h4 {
+            font-family: Patrick Hand;
+            font-style: 800;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 3em;
+            text-align: center;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .img {
+            display: flex;
+            justify-content: center;
+
+            img {
+
+            }
+        }
+    }
+}

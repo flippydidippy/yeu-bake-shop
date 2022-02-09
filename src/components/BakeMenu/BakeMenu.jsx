@@ -1,15 +1,16 @@
 import React from "react";
 import BakeMenuItem from "./BakeMenuItem/BakeMenuItem.jsx";
+import { Link } from "react-router-dom";
 
 import "./bake-menu.scss";
 
 const BakeMenu = ({bakeMenuData, openPopUp}) => {
     return (
         <section className="bake-menu">
-            <div className="title-box">
+            <Link className="title-box" to="/bake-menu">
                 <h2>Bake Menu</h2>
                 <p>(Wed-Sun)</p>
-            </div>
+            </Link>
             <div className="bake-menu-cards">
                 <ul>
                     {bakeMenuData.map((bakeMenu) => (

@@ -30,6 +30,7 @@
     }
     &-cards {
         margin-top: 1.2em;
+        
         ul {
             white-space: nowrap;
             overflow: auto;
@@ -38,6 +39,7 @@
           
 
             .bake-menu-item {
+                margin-bottom: 0.5em;
 
                 position: relative;
                 $width: 29vw;
