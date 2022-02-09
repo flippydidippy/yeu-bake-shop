@@ -1,0 +1,95 @@
+@import "../../sass/abstracts/";
+
+.navbar {
+    &-fix {
+        position: fixed;
+        z-index: 100;
+        width: 100vw;
+
+        max-height: 100px;
+
+        
+
+        &-box {
+            margin: 20px 20px 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+
+            .icon {
+                img {
+                    width: 59px;
+                }
+            }
+            .menu {
+                svg {
+                    width: 40px;
+                }
+            }
+
+            .title-box {
+                position: relative;
+                h1 {
+                    font-family: "Patrick Hand SC";
+                    text-transform: uppercase;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 32px;
+                    letter-spacing: -0.3333333432674408px;
+                    text-align: center;
+                }
+                hr {
+                    position: absolute;
+                    width: 120%;
+                    right: 50%;
+                    transform: translateX(50%);
+                    margin-top: 12px;
+                    background-color: black;
+                    height: 1px;
+                    border: 0;
+                }
+            }
+        }
+    }
+
+    .menuButton2 {
+        background-color: transparent !important;
+        transition: 100ms;
+    }
+
+    .menu-open {
+        transition: 500ms;
+        height: 100vh;
+        width: 100vw;
+        z-index: 101;
+        position: fixed;
+
+        @include medium-height {
+            height: 80vh;
+        }
+
+        @include tablet {
+        }
+    }
+
+    .menu-open-enter {
+        transform: translateX(101%);
+    }
+    .menu-open-enter-active {
+        transform: translateX(0%);
+        transition: all var(-speed) ease;
+    }
+    .menu-open-exit {
+        transform: translateX(0%);
+    }
+    .menu-open-exit-active {
+        transform: translateX(101%);
+        transition: all var(-speed) ease;
+    }
+
+    .space {
+        height: 110px;
+    }
+}

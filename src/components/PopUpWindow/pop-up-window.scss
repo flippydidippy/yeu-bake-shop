@@ -1,0 +1,63 @@
+.pop-up-window {
+    position: fixed;
+    z-index: 200;
+    bottom: 0;
+    width: 100vw;
+    height: 66.6vh;
+
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+
+    background-color: aliceblue;
+
+    .button {
+        min-height: 1.25cm;
+        width: 100vw;
+
+        display: flex;
+        justify-content: center;
+
+        &-shape {
+            margin-top: 10px;
+
+            height: 6px;
+            width: 135px;
+
+            background-color: black;
+            border-radius: 10px;
+        }
+    }
+
+    .title-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin: 0 23px 23px;
+
+        h2 {
+            font-family: Cormorant;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 29px;
+            /* identical to box height */
+
+            letter-spacing: -0.333333px;
+        }
+        img {
+            width: 16px;
+            height: 16px;
+
+        }
+    }
+    .img {
+        margin: 0 23px 23px;
+
+        img {
+            width: 100%;
+
+            object-fit: contain;
+        }
+    }
+}

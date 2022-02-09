@@ -1,0 +1,157 @@
+@import "../../../sass/abstracts/";
+
+.menu-menu {
+    position: fixed;
+    z-index: 101;
+    height: 100vh;
+    width: 100vw;
+    left: 0px;
+    top: 0px;
+
+    border: 5px solid #ffe7f9;
+    background-color: white;
+
+    animation: color 5s linear 2s infinite alternate;
+
+    @keyframes color {
+        from {border: 5px solid #ffe7f9;}
+        to {border: 5px solid #d7b4d8;}
+    }
+    .max-width {
+
+        @include tablet {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1080px;
+            margin: 0 auto;
+            height: 100%;
+        }
+
+        .navbar-fix {
+            position: relative;
+            right: 5px;
+        }
+
+        .title {
+            margin: 3.2vh 0 2vh;
+
+            @include medium-height {
+                margin: 50px 0 26px;
+            }
+
+            @include tablet {
+                display: flex;
+                justify-content: left;
+                margin: 0;
+            }
+
+            h3 {
+                font-family: "Sirin Stencil";
+                font-size: 2.8vh;
+                font-weight: 400;
+                line-height: 26px;
+                letter-spacing: -0.3333333432674408px;
+                text-align: center;
+
+                @include tablet {
+                    display: none;
+                }
+
+                @include medium-height {
+                    font-size: 18px;
+                }
+            }
+
+            svg {
+                display: none;
+                width: 42px;
+                height: 42px;
+                margin: 8px;
+
+                @include tablet {
+                    display: initial;
+                    filter: invert(100%);
+                }
+            }
+        }
+
+        .menu-box {
+            @include tablet {
+                display: flex;
+            }
+
+            ul {
+                margin-top: 100px;
+
+                @include tablet {
+                    margin: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                li {
+                    margin: 52px 0;
+
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    a {
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+
+                        margin-right: 6.666vw;
+
+                        h3 {
+                            font-family: Montserrat;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 24px;
+                            line-height: 29px;
+                            text-align: center;
+                            letter-spacing: -0.333333px;
+                            text-transform: uppercase;
+
+                            color: #000000;
+                        }
+
+                        img {
+                            height: 30px;
+                            margin-left: 22px;
+
+                            filter: invert(99%) sepia(80%) saturate(1456%) hue-rotate(191deg) brightness(84%) contrast(88%);
+                        }
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            h3 {
+                float: right;
+                margin: 2vh 6.66vw;
+                font-family: Podkova;
+                font-size: 8px;
+                font-weight: 200;
+                color: #e4ebf0;
+            }
+
+            @include tablet {
+                display: none;
+            }
+        }
+
+        .footer-icons {
+            position: absolute;
+
+            bottom: 5vh;
+            right: 6.66vw;
+
+            filter: invert(99%) sepia(80%) saturate(1456%) hue-rotate(191deg) brightness(84%) contrast(88%);
+        }
+    }
+}

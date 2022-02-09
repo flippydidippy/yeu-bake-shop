@@ -1,0 +1,108 @@
+.bake-menu {
+    margin-left: 3vw;
+    margin-right: 3vw;
+
+    .title-box {
+        display: flex;
+        justify-content: center;
+
+
+        h2 {
+            font-family: Montserrat;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 16px;
+            letter-spacing: 0.04em;
+            text-align: center;
+            text-transform: uppercase;
+            margin-right: 0.5em;
+        }
+        p {
+            font-family: Montserrat;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 16px;
+            letter-spacing: 0.04em;
+            text-align: center;
+        }
+    }
+    &-cards {
+        margin-top: 1.2em;
+        ul {
+            white-space: nowrap;
+            overflow: auto;
+            position: relative;
+
+          
+
+            .bake-menu-item {
+
+                position: relative;
+                $width: 29vw;
+                
+                display: inline-block;
+                width: $width;
+                margin-right: 3.5vw;
+                
+
+                img {
+                    width: $width;
+                    height: $width;
+                    object-fit: cover;
+                    
+                }
+                p {
+                    font-family: Cormorant;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 17px;
+                    text-align: center;
+                    letter-spacing: 0.04em;
+                    white-space: pre-wrap;
+
+                    img {
+                        width: 1em;
+                        height: 1em;
+                    }
+                }
+
+                .click-me {
+                    position: absolute;
+                    z-index: 20;
+                    width: $width;
+                    height: $width;
+
+                    top: 50%;
+                    left: 50%;
+
+                    transform: translate(-50%,-50%);
+
+                    background-color: white;
+                    border-radius: 50%;
+
+                    opacity: 0;
+
+                    animation: click-me-animation_medium_phone 4s ease-in-out 1s infinite;
+
+                    @keyframes click-me-animation_medium_phone {
+                        0% {
+                            width: 0vw;
+                            height: 0vw;
+                            opacity: 0.3;
+                        }
+                        100% {
+                            width: 20vw;
+                            height: 20vw;
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

@@ -1,0 +1,115 @@
+@import "../../sass/abstracts/";
+
+.overlay {
+    position: fixed;
+    z-index: 900;
+    top: 0;
+}
+
+.photo-open-overlay {
+    position: fixed;
+    z-index: 990;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: black;
+
+    .center {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .gradient {
+            background: linear-gradient(179.47deg, #000000 0.45%, rgba(196, 196, 196, 0) 99.55%);
+
+            position: absolute;
+            width: 100vw;
+            height: 20vh;
+            left: 0px;
+            top: 0px;
+        }
+
+        .title {
+            position: absolute;
+            top: 5%;
+            left: 3%;
+
+            color: white;
+
+            h5 {
+                font-family: Roboto;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 15px;
+                letter-spacing: 0em;
+                text-align: left;
+
+                @include medium_phone {
+                    font-size: 15px;
+                }
+
+                @include tablet {
+                    font-size: 17px;
+                }
+        
+                @include small_desktop {
+                    font-size: 19px;
+                }
+            }
+
+            p {
+                font-family: Roboto;
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 13px;
+                letter-spacing: 0em;
+                text-align: left;
+
+                margin-top: 0.5em;
+
+                @include medium_phone {
+                    font-size: 13px;
+                }
+
+                @include tablet {
+                    font-size: 15px;
+                }
+        
+                @include small_desktop {
+                    font-size: 17px;
+                }
+            }
+        }
+
+        .close-button {
+            position: absolute;
+            
+            top: 5%;
+            right: 5%;
+
+            height: calc(max(20px, min(40px, 2vw)));
+            width: calc(max(20px, min(40px, 2vw)));
+
+            svg {
+                cursor: pointer;
+                filter: invert(94%);
+                -webkit-filter: invert(94%);
+
+                path {
+                    
+                }
+            }
+        }
+
+        img {
+            width: 100vw;
+            object-fit: contain;
+            height: 100vh;
+        }
+        
+    }
+    
+}
