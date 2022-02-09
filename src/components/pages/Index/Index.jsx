@@ -3,6 +3,7 @@ import BakeMenu from "../../BakeMenu/BakeMenu";
 import PopUpWindow from "../../PopUpWindow/PopUpWindow";
 import PhotoOpenOverlay from "../../PhotoOpenOverlay/PhotoOpenOverlay";
 import TitleComp from "../../TitleComp/TitleComp";
+import Instagram from "../../Instagram/Instagram";
 
 import "./index.scss";
 
@@ -55,7 +56,42 @@ const Index = () => {
                 />
             )}
             <BakeMenu bakeMenuData={bakeMenuData} openPopUp={openPopUp} />
-            <TitleComp/>
+            <TitleComp link="/opening-hours" />
+            <div className="description">
+                <div className="instagram">
+                    <Instagram></Instagram>
+                    <p>Follow us on Instagram</p>
+                </div>
+                <div className="description-desc">
+                    <div className="description-desc-box">
+                        <div className="icon">
+                            <p>🍵</p>
+                        </div>
+                        <div className="text">
+                            <p>Milk tea, fruit ades & iced tea, coffee.</p>
+                        </div>
+                    </div>
+                    <div className="description-desc-box">
+                        <div className="icon">
+                            <p>💌</p>
+                        </div>
+                        <div className="text">
+                            <p>
+                                Woman-owned local café! BAKES & SYRUPS homemade
+                                with love ❤️
+                            </p>
+                        </div>
+                    </div>
+                    <div className="description-desc-box">
+                        <div className="icon">
+                            <p>🌱</p>
+                        </div>
+                        <div className="text">
+                            <p>Vegan options!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <Buttons />
         </section>
     );

@@ -1,15 +1,79 @@
-.first-page {
-    .title {
+.home-page {
+    .title-section {
         margin: 30px 3vw;
 
         &-box {
+            margin: 0 9vw;
+            position: relative;
             .title {
+                h1 {
+                    font-family: Patrick Hand SC;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 54px;
+                    line-height: 1.2em;
+                    text-align: center;
+                    letter-spacing: -0.333333px;
+                    text-transform: uppercase;
+                }
             }
             .hours {
+                display: flex;
+                justify-content: center;
                 &-box {
+                    border: 1px solid #000000;
+                    border-radius: 5px;
+                    margin: 0 10px;
+
+                    padding: 5px 10px;
+                    p {
+                        font-family: Montserrat;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 15px;
+                        line-height: 18px;
+                        text-align: center;
+                        letter-spacing: -0.333333px;
+                    }
                 }
             }
             .opening-hours {
+                margin: 1em 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    height: 16px;
+                    margin-right: 1ch;
+                }
+
+                p {
+                    font-family: Montserrat;
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 11px;
+                    line-height: 13px;
+                    letter-spacing: 0.04em;
+                    text-transform: uppercase;
+                }
+            }
+            hr {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .left-art {
+                position: absolute;
+                top: 50%;
+                left: -20px;
+                transform: translate(-50%,-50%);
+            }
+            .right-art {
+                position: absolute;
+                top: 50%;
+                right: -20px;
+                transform: translate(50%,-50%);
             }
         }
     }

@@ -1,0 +1,53 @@
+.home-page {
+    .description {
+        margin: 0 3vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-desc {
+            width: 50%;
+            &-box {
+                display: flex;
+                margin: 12px;
+
+                .icon {
+                    p {
+                        font-size: 12px;
+                    }
+                }
+                .text {
+                    width: 100%;
+                    p {
+                        width: 100%;
+                        font-family: Cormorant;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 15px;
+                        letter-spacing: 0em;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .instagram {
+            width: 50%;
+            
+            div {
+                height: 200px;
+            }
+
+            p {
+                font-family: Montserrat;
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 250;
+                line-height: 13px;
+                letter-spacing: 0em;
+                text-align: center;
+            }
+        }
+    }
+}
