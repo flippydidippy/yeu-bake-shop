@@ -19,6 +19,7 @@ const BakeMenu = ({bakeMenuData, openPopUp}) => {
                             img={bakeMenu.img}
                             vegan={bakeMenu.vegan}
                             openPopUp={openPopUp}
+                            key={bakeMenu.id}
                         />
                     ))}
                     

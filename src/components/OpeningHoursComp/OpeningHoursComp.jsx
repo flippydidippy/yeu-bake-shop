@@ -1,22 +1,27 @@
 import React from "react";
 
-import "./opening-hours-comp.scss"
+import "./opening-hours-comp.scss";
 
-const OpeningHoursComp = () => {
+const OpeningHoursComp = ({ openingHoursData }) => {
     return (
         <section className="opening-hours">
             <div className="opening-hours-box">
                 <h1>Opening hours</h1>
-                <div className="main">
-                    
-                    <p>Monday-Friday:</p>
-                    <small>12:00-18:00</small>
-                </div>
+
+                {openingHoursData[0].regular.map((hour) => (
+                    <div className="main">
+                        <p>{hour.days}:</p>
+                        
+                        <small>{hour.time}</small>
+                    </div>
+                ))}
                 <h1>Other hours</h1>
-                <div className="other">
-                    <p>Monday-Friday:</p>
-                    <small>12:00-18:00</small>
-                </div>
+                {openingHoursData[1].other.map((hour) => (
+                    <div className="other">
+                        <p>{hour.days}:</p>
+                        <small>{hour.time}</small>
+                    </div>
+                ))}
             </div>
         </section>
     );

@@ -1,17 +1,18 @@
 .opening-hours {
-    margin-left: 3vw;
-    margin-right: 3vw;
+    margin-left: 6vw;
+    margin-right: 6vw;
 
     &-box {
-        .main {
-            
+        width: calc(min(30ch,100%));
+        
+        .main, .other {
+            display: flex;    
+            justify-content: space-between;
         }
-        .other {
-            margin-top: 36px;
-            
-        }
+        
 
         h1, h2 {
+            margin: 0.5em 0;
             font-family: Cormorant;
             font-style: normal;
             font-weight: bold;
@@ -21,6 +22,7 @@
         }
 
         p {
+            margin-bottom: 0.5em;
             font-family: Cormorant;
             font-style: normal;
             font-weight: normal;
@@ -29,11 +31,14 @@
         }
 
         small {
+            width: 50%;
             font-family: Cormorant;
             font-style: normal;
             font-weight: normal;
             font-size: 18px;
             line-height: 22px;
+            margin-bottom: 0.5em;
+            text-align: center;
         }
     }
 }

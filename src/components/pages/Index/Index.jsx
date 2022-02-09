@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import BakeMenu from "../../BakeMenu/BakeMenu";
 import PopUpWindow from "../../PopUpWindow/PopUpWindow";
 import PhotoOpenOverlay from "../../PhotoOpenOverlay/PhotoOpenOverlay";
+import TitleComp from "../../TitleComp/TitleComp";
 
 import "./index.scss";
 
@@ -54,6 +55,7 @@ const Index = () => {
                 />
             )}
             <BakeMenu bakeMenuData={bakeMenuData} openPopUp={openPopUp} />
+            <TitleComp/>
             <Buttons />
         </section>
     );
