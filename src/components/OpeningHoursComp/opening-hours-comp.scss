@@ -1,0 +1,39 @@
+.opening-hours {
+    margin-left: 3vw;
+    margin-right: 3vw;
+
+    &-box {
+        .main {
+            
+        }
+        .other {
+            margin-top: 36px;
+            
+        }
+
+        h1, h2 {
+            font-family: Cormorant;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 29px;
+            letter-spacing: -0.333333px;
+        }
+
+        p {
+            font-family: Cormorant;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        small {
+            font-family: Cormorant;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+}
