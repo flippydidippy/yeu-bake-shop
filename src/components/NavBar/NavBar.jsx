@@ -25,7 +25,8 @@ const NavBar = () => {
                     </div>
                 </CSSTransition>
             ) : (
-                <Menu />
+                // <Menu />
+                <></>
             )}
             <NavBarFix
                 onClick={() => {

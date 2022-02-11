@@ -1,0 +1,100 @@
+.contact {
+    margin-left: 6vw;
+    margin-right: 6vw;
+
+    &-box {
+        width: 100%;
+
+        .address,
+        .directions {
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                margin-bottom: 0.5em;
+                font-family: Cormorant;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+
+        h1,
+        h2 {
+            margin: 0.5em 0;
+            font-family: Cormorant;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 29px;
+            letter-spacing: -0.333333px;
+        }
+
+
+        .social-media {
+            
+            &-col {
+                margin-top: 36px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 68px;
+                }
+
+                small {
+                    font-family: Cormorant;
+                    font-size: 14px;
+                    line-height: 17px;
+                    margin-left: 3em;
+                }
+            }
+        }
+
+        .instagram {
+            width: 50%;
+            margin: 30px auto;
+            
+            div {
+                height: 200px;
+            }
+
+            p {
+                font-family: Montserrat;
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 250;
+                line-height: 13px;
+                letter-spacing: 0em;
+                text-align: center;
+            }
+            
+            hr {
+                margin: 20px 0;
+            }
+        }
+        .desc {
+            margin-top: 1em;
+
+            p {
+                margin-bottom: 0.5em;
+                font-family: Cormorant;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 22px;
+                text-align: center;
+            }
+            .img {
+                display: flex;
+                justify-content: center;
+                img {
+                    margin: 0 auto;
+                    width: 1.2cm;
+                }
+            }
+        }
+    }
+}

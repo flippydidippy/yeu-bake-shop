@@ -1,0 +1,38 @@
+.mobile-arrow {
+    position: absolute;
+    top: 33.33%;
+    right: 3%;
+
+    transform: translate(0%, -50%);
+    -webkit-animation: arrowSwiperAnimation 15s ease-in-out infinite;
+    -moz-animation: arrowSwiperAnimation 15s ease-in-out infinite;
+    animation: arrowSwiperAnimation 15s ease-in-out infinite;
+
+    img {
+        width: 30px;
+        filter: invert(99%) sepia(100%) saturate(6%) hue-rotate(137deg) brightness(101%) contrast(102%);
+    }
+
+    @keyframes arrow {
+    }
+}
+
+:root {
+    --centerpoint: 2.33%;
+    --movement: 1.5%;
+    --op: 0.7;
+}
+
+@keyframes arrowSwiperAnimation { 
+    0%{opacity: 0;}
+    10%{right: calc(var(--centerpoint) + var(--movement));opacity: 0;}
+    20%{right: calc(var(--centerpoint) - var(--movement));}
+    30%{right: calc(var(--centerpoint) + var(--movement)); opacity: var(--op);}
+    40%{right: calc(var(--centerpoint) - var(--movement)); opacity: var(--op);}
+    50%{right: calc(var(--centerpoint) + var(--movement)); opacity: var(--op);}
+    60%{right: calc(var(--centerpoint) - var(--movement)); opacity: var(--op);}
+    70%{right: calc(var(--centerpoint) + var(--movement)); opacity: var(--op);}
+    80%{right: calc(var(--centerpoint) - var(--movement)); opacity: var(--op);}
+    90%{right: calc(var(--centerpoint) + var(--movement));}
+    100%{right: calc(var(--centerpoint) - var(--movement)); opacity: 0;}
+}

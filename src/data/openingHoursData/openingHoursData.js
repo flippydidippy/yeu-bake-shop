@@ -8,32 +8,32 @@ const openingHoursData = [
                 time: "12:00-18:00"
             },
             {
-                id: 0,
+                id: 1,
                 days: "Tuesday",
                 time: "12:00-18:00"
             },
             {
-                id: 0,
+                id: 2,
                 days: "Wednesday",
                 time: "12:00-18:00"
             },
             {
-                id: 0,
+                id: 3,
                 days: "Thursday",
                 time: "12:00-18:00"
             },
             {
-                id: 0,
+                id: 4,
                 days: "Friday",
                 time: "12:00-18:00"
             },
             {
-                id: 0,
+                id: 5,
                 days: "Saturday",
                 time: "12:00-20:00"
             },
             {
-                id: 0,
+                id: 6,
                 days: "Sunday",
                 time: "12:00-17:00"
             },
@@ -48,7 +48,7 @@ const openingHoursData = [
                 time: "Closed"
             },
             {
-                id: 0,
+                id: 1,
                 days: "Christmas eve",
                 time: "Closed"
             },

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import BakeMenuItem from "./BakeMenuItem/BakeMenuItem.jsx";
 import { Link } from "react-router-dom";
+import MobileArrow from "./MobileArrow/MobileArrow.jsx";
 
 import "./bake-menu.scss";
 
-const BakeMenu = ({bakeMenuData, openPopUp}) => {
+const BakeMenu = ({ bakeMenuData, openPopUp }) => {
+    const [isVisibleArrow, setIsVisibleArrow] = useState(true);
+
     return (
         <section className="bake-menu">
             <Link className="title-box" to="/bake-menu">
@@ -12,7 +15,7 @@ const BakeMenu = ({bakeMenuData, openPopUp}) => {
                 <p>(Wed-Sun)</p>
             </Link>
             <div className="bake-menu-cards">
-                <ul>
+                <ul onScroll={() => setIsVisibleArrow(false)}>
                     {bakeMenuData.map((bakeMenu) => (
                         <BakeMenuItem
                             title={bakeMenu.title}
@@ -22,8 +25,8 @@ const BakeMenu = ({bakeMenuData, openPopUp}) => {
                             key={bakeMenu.id}
                         />
                     ))}
-                    
                 </ul>
+                {isVisibleArrow && <MobileArrow />}
             </div>
         </section>
     );

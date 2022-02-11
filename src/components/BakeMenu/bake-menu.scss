@@ -27,9 +27,12 @@
             letter-spacing: 0.04em;
             text-align: center;
         }
+
+        
     }
     &-cards {
         margin-top: 1.2em;
+        position: relative;
         
         ul {
             white-space: nowrap;

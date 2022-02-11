@@ -40,5 +40,10 @@
             margin-bottom: 0.5em;
             text-align: center;
         }
+
+        .today {
+            text-decoration: underline;
+            text-underline-offset: 3px
+        }
     }
 }
