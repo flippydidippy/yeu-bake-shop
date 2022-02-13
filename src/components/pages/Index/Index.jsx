@@ -35,6 +35,13 @@ const Index = () => {
         setOverlayOpen(!overlayOpen);
     }
 
+    function toggleOverlayDirect(i, t, v) {
+        setOverlayOpen(!overlayOpen);
+        img = i;
+        title = t;
+        vegan = v;
+    }
+
     return (
         <section className="home-page">
             {overlayOpen && (
@@ -55,7 +62,7 @@ const Index = () => {
                     toggleOverlay={toggleOverlay}
                 />
             )}
-            <BakeMenu bakeMenuData={bakeMenuData} openPopUp={openPopUp} />
+            <BakeMenu bakeMenuData={bakeMenuData} openPopUp={(window.innerWidth < 767) ? openPopUp : toggleOverlayDirect} />
             <TitleComp link="/opening-hours" />
             <div className="description">
                 <div className="instagram">

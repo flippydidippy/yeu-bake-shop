@@ -1,4 +1,17 @@
+@import "../../../sass/abstracts/";
+
+.find-us-page {
+    
+    @include tablet {
+        max-width: $normal_max_width;
+        margin: 0 auto;
+        height: calc(100vh - 110px) ;
+    }
+}
+
 .find-us {
+    
+
     margin-left: 6vw;
     margin-right: 6vw;
 
@@ -10,7 +23,7 @@
             display: flex;
             justify-content: space-between;
 
-            p {
+            p, address {
                 margin-bottom: 0.5em;
                 font-family: Cormorant;
                 font-style: normal;
@@ -63,6 +76,10 @@
 
         .desc {
             margin-top: 10vh;
+
+            @include tablet {
+                margin-top: calc(96px + 10vh);
+            }
 
             p {
                 margin-bottom: 0.5em;

@@ -10,6 +10,7 @@ import {
     OpeningHours,
     BakeMenuPage,
     Menu,
+    Footer,
 } from "./components";
 
 // import ScrollToTop from "./components/hooks/ScrollToTop"
@@ -28,6 +29,7 @@ const App = () => {
 
                 <Route path="*" element={<Page404 />} />
             </Routes>
+            {window.innerWidth > 767 && <Footer/>}
         </>
     );
 };

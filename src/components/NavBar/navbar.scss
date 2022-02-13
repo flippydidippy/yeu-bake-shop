@@ -8,7 +8,7 @@
 
         max-height: 100px;
 
-        
+        background-color: white;
 
         &-box {
             margin: 20px 20px 0px;
@@ -72,6 +72,11 @@
 
         @include tablet {
         }
+
+        .navbar-fix {
+            left: 0 !important;
+            width: 100%;
+        }
     }
 
     .menu-open-enter {
@@ -88,6 +93,7 @@
         transform: translateX(101%);
         transition: all var(-speed) ease;
     }
+
 
     .space {
         height: 110px;

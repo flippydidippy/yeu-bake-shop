@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import BakeMenuItem from "./BakeMenuItem/BakeMenuItem.jsx";
 import { Link } from "react-router-dom";
 import MobileArrow from "./MobileArrow/MobileArrow.jsx";
+import shortid from 'shortid';
 
 import "./bake-menu.scss";
 
@@ -22,11 +23,11 @@ const BakeMenu = ({ bakeMenuData, openPopUp }) => {
                             img={bakeMenu.img}
                             vegan={bakeMenu.vegan}
                             openPopUp={openPopUp}
-                            key={bakeMenu.id}
+                            key={shortid.generate()}
                         />
                     ))}
                 </ul>
-                {isVisibleArrow && <MobileArrow />}
+                {(window.innerWidth < 767 && isVisibleArrow) && <MobileArrow />}
             </div>
         </section>
     );

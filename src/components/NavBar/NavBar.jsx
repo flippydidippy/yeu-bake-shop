@@ -21,12 +21,15 @@ const NavBar = () => {
                     classNames="menu-open"
                 >
                     <div className="menu-open ">
-                        <Menu toggleOpen={toggleOpen} menuIcon={!open} withTitle/>
+                        <Menu
+                            toggleOpen={toggleOpen}
+                            menuIcon={!open}
+                            withTitle
+                        />
                     </div>
                 </CSSTransition>
             ) : (
-                // <Menu />
-                <></>
+                <Menu />
             )}
             <NavBarFix
                 onClick={() => {
@@ -34,7 +37,7 @@ const NavBar = () => {
                 }}
                 menuIcon={!open}
             />
-            <div className="space"/>
+            <div className="space" />
         </header>
     );
 };

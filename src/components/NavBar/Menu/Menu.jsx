@@ -53,12 +53,12 @@ const Menu = ({ toggleOpen, menuIcon, withTitle }) => {
                     <MenuItem title="© 2022 Yeu Bake Shop" link="/"></MenuItem>
                 </div>
                 <div className="footer-icons">
-                    <Link to="/">
+                    <a href="https://www.instagram.com/yeubakeshop">
                         <img src="/icons/icons8-instagram.svg" alt="" />
-                    </Link>
-                    <Link to="/">
+                    </a>
+                    <a href="https://www.facebook.com/yeubakeshop">
                         <img src="/icons/icons8-facebook.svg" alt="" />
-                    </Link>
+                    </a>
                 </div>
             </div>
         </div>

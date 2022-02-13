@@ -7,35 +7,52 @@ import "./contact.scss";
 
 const Contact = () => {
     return (
-        <section className="contact">
-            <div className="contact-box">
-                <h1>Follow us on social media</h1>
-                <div className="social-media">
-                    <a className="social-media-col" href="e">
-                        <img src="/icons/icons8-facebook.svg" alt="" />
-                        <small>@yeubakeshop</small>
-                    </a>
-                    <a className="social-media-col" href="e">
-                        <img src="/icons/icons8-instagram.svg" alt="" />
-                        <small>@yeubakeshop</small>
-                    </a>
-                </div>
-                
-                <div className="instagram">
-                    <hr />
-                    <Instagram></Instagram>
-                    <p>Follow us on Instagram</p>
-                    <hr />
-                </div>
+        <section className="contact-page">
+            <section className="contact">
+                <div className="contact-box">
+                    <h1>Follow us on social media</h1>
+                    <div className="social-media">
+                        <a
+                            className="social-media-col"
+                            href="https://www.instagram.com/yeubakeshop"
+                        >
+                            <img
+                                src="/icons/icons8-facebook.svg"
+                                alt="facebook"
+                            />
+                            <small>@yeubakeshop</small>
+                        </a>
+                        <a
+                            className="social-media-col"
+                            href="https://www.facebook.com/yeubakeshop"
+                        >
+                            <img
+                                src="/icons/icons8-instagram.svg"
+                                alt="instagram "
+                            />
+                            <small>@yeubakeshop</small>
+                        </a>
+                    </div>
 
-                <div className="desc">
-                    <p>We look forward to your next visit!</p>
-                    <Link className="img" to="/">
-                        <img src="/icons/icons8-back-arrow-60_1.svg" alt="" />
-                    </Link>
+                    <div className="instagram">
+                        <hr />
+                        <Instagram></Instagram>
+                        <p>Follow us on Instagram</p>
+                        <hr />
+                    </div>
+
+                    <div className="desc">
+                        <p>We look forward to your next visit!</p>
+                        <Link className="img" to="/">
+                            <img
+                                src="/icons/icons8-back-arrow-60_1.svg"
+                                alt=""
+                            />
+                        </Link>
+                    </div>
                 </div>
-            </div>
-            <Buttons />
+                <Buttons />
+            </section>
         </section>
     );
 };

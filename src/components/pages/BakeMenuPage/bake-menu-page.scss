@@ -1,4 +1,13 @@
+@import "../../../sass/abstracts/";
+
+
 .bake-menu-page {
+    @include tablet {
+        max-width: $normal_max_width;
+        margin: 0 auto;
+        height: calc(100vh - 110px) ;
+    }
+    
     .bake-menu-desc {
         margin: 20px 6vw;
 

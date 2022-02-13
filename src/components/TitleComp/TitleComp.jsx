@@ -5,14 +5,21 @@ import "./title-comp.scss";
 
 import openingHoursData from "../../data/openingHoursData/openingHoursData";
 
-var hours = new Date().getHours() - (new Date().getTimezoneOffset())/60 + 1;
+var hours = new Date().getHours() + new Date().getTimezoneOffset() / 60 + 1;
 var date = new Date().getDate(); //To get the Current Date
 var month = new Date().getMonth() + 1; //To get the Current Month
 var year = new Date().getFullYear(); //To get the Current Year
 
 const TitleComp = ({ link }) => {
     function checkWeekDay(d, m, y) {
-        const weekDay = new Date(y, m, d).getDay();
+        var weekDay = new Date(y, m, d).getDay();
+
+        if(weekDay === 0) {
+            weekDay=6;
+        } else {
+            weekDay--;
+        }
+
         return weekDay;
     }
 
@@ -63,7 +70,9 @@ const TitleComp = ({ link }) => {
                         <p>
                             Today:{" "}
                             {shortenTime(
-                                getOpeningTime(checkWeekDay(date, month, year))
+                                getOpeningTime(
+                                    checkWeekDay(date, month, year)
+                                )
                             ) +
                                 " - " +
                                 shortenTime(

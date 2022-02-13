@@ -9,6 +9,8 @@ import PhotoOpenOverlay from "../../PhotoOpenOverlay/PhotoOpenOverlay";
 import bakeMenuData from "../../../data/bakeMenuData/bakeMenuData";
 import menuData from "../../../data/menuData/menuData";
 
+import shortid from 'shortid';
+
 import "./menu.scss";
 
 var img;
@@ -43,7 +45,33 @@ const Menu = () => {
                 </div>
                 
             </header>
-            <section className="bake-menu-page">
+            <section className="menu-page-page">
+            
+            <section className="menu-page">
+                {menuData.map((menuSet) => (
+                    <div className="menu-page-box" key={shortid.generate()}>
+                        <h1>{menuSet.title}</h1>
+                        <div className="menu-sort">
+                            {menuSet.menuSet.map((menuItem) => (
+                                <div className="menu-sort-item" key={shortid.generate()}>
+                                    <div className="menu-sort-item-title">
+                                        <h3>{menuItem.title}</h3>
+                                        <p>{menuItem.price}</p>
+                                        {menuItem.icon && (<img
+                                            src={menuItem.icon}
+                                            alt="Menu Item icon"
+                                        />)}
+                                    </div>
+                                    <div className="menu-sort-item-desc">
+                                        <p>{menuItem.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                ))}
+                </section>
+                <section className="bake-menu-page">
                 {overlayOpen && (
                     <section className="overlay">
                         <PhotoOpenOverlay
@@ -69,30 +97,6 @@ const Menu = () => {
                     />
                 </div>
             </section>
-            <section className="menu-page">
-                {menuData.map((menuSet) => (
-                    <div className="menu-page-box" key={menuSet.id}>
-                        <h1>{menuSet.title}</h1>
-                        <div className="menu-sort">
-                            {menuSet.menuSet.map((menuItem) => (
-                                <div className="menu-sort-item" key={menuItem.id}>
-                                    <div className="menu-sort-item-title">
-                                        <h3>{menuItem.title}</h3>
-                                        <p>{menuItem.price}</p>
-                                        {menuItem.icon && (<img
-                                            src={menuItem.icon}
-                                            alt="Menu Item icon"
-                                        />)}
-                                    </div>
-                                    <div className="menu-sort-item-desc">
-                                        <p>{menuItem.desc}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                ))}
-
                 <Buttons btn2Link="/" btn2Text="Home"/>
             </section>
         </>

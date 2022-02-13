@@ -17,20 +17,45 @@
         from {border: 5px solid #ffe7f9;}
         to {border: 5px solid #d7b4d8;}
     }
+
+    @include tablet {
+        height: 88px;
+    }
+
     .max-width {
 
         @include tablet {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            max-width: 1080px;
+            justify-content: center;
+            max-width: $normal_max_width;
             margin: 0 auto;
             height: 100%;
+            
         }
 
         .navbar-fix {
             position: relative;
-            right: 5px;
+            left: 5px;
+
+            @include tablet {
+                position: absolute;
+                z-index: 0;
+
+                .menu {
+                    display: none;
+                }
+                &-box {
+                    margin: 5px;
+
+                    .icon {
+                        width: 5vw;
+                        margin: 0 5px !important;
+                    }
+                }
+                
+                width: 0;
+            }
         }
 
         .title {
@@ -79,24 +104,37 @@
         .menu-box {
             @include tablet {
                 display: flex;
+                justify-content: center;
+                height: 100%;
+                width: 80%;
+            }
+
+            @include small_desktop {
+                width: 100%;
             }
 
             ul {
                 margin-top: 100px;
 
                 @include tablet {
-                    margin: 0;
+                    margin: 5px 0;
                     display: flex;
-                    justify-content: center;
+                    justify-content: space-between;
                     align-items: center;
+                    width: 100%;
                 }
 
                 li {
                     margin: 52px 0;
 
-
                     &:hover {
                         text-decoration: underline;
+                        
+                    }
+
+                    @include tablet {
+                        margin: 0;
+                        
                     }
 
                     a {
@@ -105,6 +143,12 @@
                         align-items: center;
 
                         margin-right: 6.666vw;
+
+                        @include tablet {
+                            margin: 0 15px;
+                            display: flex;
+                            justify-content: center;
+                        }
 
                         h3 {
                             font-family: Montserrat;
@@ -117,6 +161,16 @@
                             text-transform: uppercase;
 
                             color: #000000;
+
+                            @include tablet {
+                                font-size: 14px;
+                                line-height: 18px;
+                            }
+
+                            @include small_desktop {
+                                font-size: 16px;
+                                line-height: 20px;
+                            }
                         }
 
                         img {
@@ -152,6 +206,10 @@
             right: 6.66vw;
 
             filter: invert(99%) sepia(80%) saturate(1456%) hue-rotate(191deg) brightness(84%) contrast(88%);
+
+            @include tablet {
+                display: none;
+            }
         }
     }
 }

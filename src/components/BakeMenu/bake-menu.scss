@@ -1,3 +1,5 @@
+@import "../../sass/abstracts/";
+
 .bake-menu {
     margin-left: 3vw;
     margin-right: 3vw;
@@ -12,20 +14,28 @@
             font-size: 13px;
             font-style: normal;
             font-weight: 900;
-            line-height: 16px;
+            line-height: 1.4em;
             letter-spacing: 0.04em;
             text-align: center;
             text-transform: uppercase;
             margin-right: 0.5em;
+
+            @include tablet {
+                font-size: 14px;
+            }
         }
         p {
             font-family: Montserrat;
             font-size: 13px;
             font-style: normal;
             font-weight: 500;
-            line-height: 16px;
+            line-height: 1.4em;
             letter-spacing: 0.04em;
             text-align: center;
+
+            @include tablet {
+                font-size: 14px;
+            }
         }
 
         
@@ -39,6 +49,11 @@
             overflow: auto;
             position: relative;
 
+            @include tablet {
+                display: flex;
+                justify-content: center;
+                overflow: unset;
+            }
           
 
             .bake-menu-item {
@@ -51,25 +66,47 @@
                 width: $width;
                 margin-right: 3.5vw;
                 
+                @include tablet {
+                    margin: 0 0.5em;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
 
                 img {
                     width: $width;
                     height: $width;
                     object-fit: cover;
                     
+                    @include tablet {
+                        width: 100%;
+                        height: 80%;
+                        object-fit: cover;
+                    }
+
+                    @include small_desktop {
+                        height: 86%;
+                    }
                 }
                 p {
                     font-family: Cormorant;
                     font-weight: 600;
                     font-size: 14px;
-                    line-height: 17px;
+                    line-height: 1.2em;
                     text-align: center;
                     letter-spacing: 0.04em;
                     white-space: pre-wrap;
 
+                    padding: 0 0.5em;
+
                     img {
                         width: 1em;
                         height: 1em;
+                    }
+
+                    @include tablet {
+                         font-size: 15px;
                     }
                 }
 
@@ -89,13 +126,19 @@
 
                     opacity: 0;
 
+                    $op: 0.3;
+
+                    @include tablet {
+                        $op: 0.05;
+                    }
+
                     animation: click-me-animation_medium_phone 4s ease-in-out 1s infinite;
 
                     @keyframes click-me-animation_medium_phone {
                         0% {
                             width: 0vw;
                             height: 0vw;
-                            opacity: 0.3;
+                            opacity: $op;
                         }
                         100% {
                             width: 20vw;
@@ -103,6 +146,8 @@
                             opacity: 0;
                         }
                     }
+
+                    
                 }
             }
         }

@@ -1,9 +1,22 @@
+@import "../../../sass/abstracts/";
+
 .home-page {
+    
+    @include tablet {
+        max-width: $normal_max_width;
+        margin: 0 auto;
+        height: calc(100vh - 110px) ;
+    }
+
     .description {
-        margin: 0 3vw;
+        margin: auto;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include tablet {
+            width: 66%;
+        }
 
         &-desc {
             width: 50%;
@@ -15,6 +28,18 @@
                     p {
                         font-size: 12px;
                     }
+
+                    @include medium_phone {
+                        font-size: 14px;
+                    }
+
+                    @include tablet {
+                        font-size: 16px;
+                    }
+
+                    @include desktop {
+                        font-size: 18px;
+                    }
                 }
                 .text {
                     width: 100%;
@@ -22,11 +47,22 @@
                         width: 100%;
                         font-family: Cormorant;
                         font-size: 12px;
-                        font-style: normal;
                         font-weight: 400;
-                        line-height: 15px;
+                        line-height: 1.3em;
                         letter-spacing: 0em;
                         text-align: center;
+
+                        @include medium_phone {
+                            font-size: 14px;
+                        }
+
+                        @include tablet {
+                            font-size: 16px;
+                        }
+
+                        @include desktop {
+                            font-size: 18px;
+                        }
                     }
                 }
             }
@@ -34,7 +70,7 @@
 
         .instagram {
             width: 50%;
-            
+
             div {
                 height: 200px;
             }
@@ -44,9 +80,34 @@
                 font-size: 11px;
                 font-style: normal;
                 font-weight: 250;
-                line-height: 13px;
+                line-height: 1.3em;
                 letter-spacing: 0em;
                 text-align: center;
+            }
+        }
+    }
+
+    @include tablet {
+        .bake-menu {
+            width: 75%;
+            margin: 0 auto;
+            margin-bottom: 92px;
+
+            &-cards {
+                width: 100%;
+            }
+        }
+    }
+
+
+    @include small_desktop {
+        .bake-menu {
+            width: 66.6%;
+            margin: 0 auto;
+            margin-bottom: 92px;
+
+            &-cards {
+                width: 100%;
             }
         }
     }
