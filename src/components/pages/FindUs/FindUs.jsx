@@ -57,7 +57,7 @@ const FindUs = () => {
                     <div className="social-media">
                         <a
                             className="social-media-col"
-                            href="https://www.instagram.com/yeubakeshop"
+                            href="https://www.facebook.com/yeubakeshop"
                         >
                             <img
                                 src="/icons/icons8-facebook.svg"
@@ -67,7 +67,7 @@ const FindUs = () => {
                         </a>
                         <a
                             className="social-media-col"
-                            href="https://www.facebook.com/yeubakeshop"
+                            href="https://www.instagram.com/yeubakeshop"
                         >
                             <img
                                 src="/icons/icons8-instagram.svg"
