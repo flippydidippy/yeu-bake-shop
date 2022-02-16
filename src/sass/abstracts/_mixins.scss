@@ -42,19 +42,19 @@ $medium-height: 767px;
 $large-height: 1200px;
 
 @mixin small-height {
-  @media (min-height: #{$small-height}) {
+  @media (max-height: #{$small-height}) {
       @content;
   }
 }
 
 @mixin medium-height {
-  @media (min-height: #{$medium-height}) {
+  @media (max-height: #{$medium-height}) {
       @content;
   }
 }
 
 @mixin large-height {
-  @media (min-height: #{$large-height}) {
+  @media (max-height: #{$large-height}) {
       @content;
   }
 }

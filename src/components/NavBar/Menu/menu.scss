@@ -114,7 +114,7 @@
             }
 
             ul {
-                margin-top: 100px;
+                margin-top: 11.68vh;
 
                 @include tablet {
                     margin: 5px 0;
@@ -125,7 +125,7 @@
                 }
 
                 li {
-                    margin: 52px 0;
+                    margin: 5.86vh 0;
 
                     &:hover {
                         text-decoration: underline;
@@ -154,8 +154,8 @@
                             font-family: Montserrat;
                             font-style: normal;
                             font-weight: normal;
-                            font-size: 24px;
-                            line-height: 29px;
+                            font-size: calc(min(24px, 4vh));
+                            line-height: 1.2em;
                             text-align: center;
                             letter-spacing: -0.333333px;
                             text-transform: uppercase;
@@ -174,8 +174,8 @@
                         }
 
                         img {
-                            height: 30px;
-                            margin-left: 22px;
+                            height: calc(min(30px, 5vh));
+                            margin-left: calc(min(5.5vw, 22px));
 
                             filter: invert(99%) sepia(80%) saturate(1456%) hue-rotate(191deg) brightness(84%) contrast(88%);
                         }
@@ -186,7 +186,7 @@
 
         .copyright {
             h3 {
-                float: right;
+                float: left;
                 margin: 2vh 6.66vw;
                 font-family: Podkova;
                 font-size: 8px;
@@ -202,8 +202,12 @@
         .footer-icons {
             position: absolute;
 
-            bottom: 5vh;
-            right: 6.66vw;
+            bottom: calc(max(5vh,20px));
+            right: calc(max(6.66vw,20px));
+
+            img {
+                height: calc(min(60px, 10vh));
+            }
 
             filter: invert(99%) sepia(80%) saturate(1456%) hue-rotate(191deg) brightness(84%) contrast(88%);
 

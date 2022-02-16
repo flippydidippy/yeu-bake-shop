@@ -5,9 +5,13 @@
 }
 
 .opening-hours-page {
+    margin-bottom: calc(min(150px, 20vh));
+
     @include tablet {
         max-width: $normal_max_width;
         margin: 0 auto;
         height: calc(100vh - 110px) ;
     }
+
+    
 }

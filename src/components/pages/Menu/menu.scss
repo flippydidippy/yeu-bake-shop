@@ -1,7 +1,6 @@
 @import "../../../sass/abstracts/";
 
 .menu-page-page {
-    
 
     @include tablet {
         max-width: $normal_max_width;
@@ -21,28 +20,32 @@
 }
 
 .menu-page {
-    margin: 0 6vw;
+    margin: 0 6vw 0vh;
 
-    height: 50vh;
     overflow: scroll;
+
+
 
     @include tablet {
         overflow: hidden;
         margin: 10px 6vw;
         height: unset;
-    }
-
-    @include tablet {
         display: flex;
         margin: 0 3vw;
     }
+
+    
 
     &-box {
         @include tablet {
             margin: 0 3vw;
             
         }
-        
+        @include small_height {
+            &:last-child {
+                margin-bottom: calc(15vh + 2em);
+            }
+        }
 
         h1 {
             font-family: Cormorant;
@@ -106,12 +109,18 @@
             }
         }
     }
+
+    .bake-menu-page {
+        @include tablet {
+            height: unset;
+        }
+    }
 }
 
+
+
 .bake-menu-page {
-    @include tablet {
-        height: unset;
-    }
+    
 
     &-fixed {
         background-color: white;
@@ -125,6 +134,10 @@
         .bake-menu {
             width: 100vw;
         }
+
+        @include small_height {
+            display: none;
+        }
     }
 }
 
@@ -137,6 +150,8 @@
         left: 50%;
 
         transform: translateX(-50%);
+
+        z-index: 100;
 
         @include tablet {
             top: 0px;

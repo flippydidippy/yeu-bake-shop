@@ -47,20 +47,24 @@
 
         .social-media {
             &-col {
-                margin-top: 36px;
+                margin-top: calc(min(36px,6vh));
                 width: 100%;
                 display: flex;
                 align-items: center;
 
                 img {
-                    width: 68px;
+                    width: calc(min(68px,12vh));
                 }
 
                 small {
                     font-family: Cormorant;
                     font-size: 14px;
-                    line-height: 17px;
+                    line-height: 1.2em;
                     margin-left: 3em;
+
+                    @include tablet {
+                        font-size: 15px;
+                    }
                 }
             }
 
@@ -97,6 +101,11 @@
         }
         .desc {
             margin-top: 1em;
+            margin-bottom: calc(min(150px,20vh));
+
+            @include tablet {
+                margin: 1em 0;
+            }
 
             p {
                 margin-bottom: 0.5em;

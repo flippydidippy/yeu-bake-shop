@@ -50,7 +50,7 @@ const Menu = ({ toggleOpen, menuIcon, withTitle }) => {
                     </ul>
                 </div>
                 <div className="copyright">
-                    <MenuItem title="© 2022 Yeu Bake Shop" link="/"></MenuItem>
+                    <MenuItem title="© 2022 Yeu Bake Shop by Filip Dannevik" link="/"></MenuItem>
                 </div>
                 <div className="footer-icons">
                     <a href="https://www.instagram.com/yeubakeshop">

@@ -1,15 +1,22 @@
 @import "../../../sass/abstracts/";
 
 .home-page {
-    
+    margin-bottom: calc(min(150px, 20vh));
+
     @include tablet {
         max-width: $normal_max_width;
         margin: 0 auto;
-        height: calc(100vh - 110px) ;
+        height: calc(100vh - 110px);
+        margin-bottom: 0;
+    }
+
+    @include small_height {
+        display: flex;
+        flex-direction: column;
     }
 
     .description {
-        margin: auto;
+        margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -17,6 +24,8 @@
         @include tablet {
             width: 66%;
         }
+
+        
 
         &-desc {
             width: 50%;
@@ -99,7 +108,6 @@
         }
     }
 
-
     @include small_desktop {
         .bake-menu {
             width: 66.6%;
@@ -109,6 +117,20 @@
             &-cards {
                 width: 100%;
             }
+        }
+    }
+
+    @include small_height {
+        
+        .title-section {
+            order: 0;
+            margin-top: -2em;
+        }
+        .bake-menu {
+            order: 1;
+        }
+        .description {
+            order: 2;
         }
     }
 }

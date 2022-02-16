@@ -1,13 +1,13 @@
 import React from 'react'
 import './photoopenoverlay.scss';
 
-const PhotoOpenOverlay = ({title, image, alt, open}) => {
+const PhotoOpenOverlay = ({title, image, alt, vegan, open}) => {
     return (
         <div className="photo-open-overlay">
             <div className="center">
                 <div className="gradient"/>
                 <div className="title">
-                    <h5>{title}</h5>
+                    <h5>{title} {vegan && <> <img src="/icons/16px-Vegetarian-mark.svg.png" alt="Vegan icon" /></>}</h5>
                     <p>{alt}</p>
                 </div>
                 <div className="close-button">

@@ -74,6 +74,10 @@
                     cursor: pointer;
                 }
 
+                &:last-child {
+                    margin-right: 6vw;
+                }
+
                 img {
                     width: $width;
                     height: $width;

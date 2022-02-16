@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+
 import BakeMenu from "../../BakeMenu/BakeMenu";
 import PopUpWindow from "../../PopUpWindow/PopUpWindow";
 import PhotoOpenOverlay from "../../PhotoOpenOverlay/PhotoOpenOverlay";
 import TitleComp from "../../TitleComp/TitleComp";
 import Instagram from "../../Instagram/Instagram";
+import Helm from "../../Helm/Helm";
 
 import "./index.scss";
 
@@ -43,12 +45,22 @@ const Index = () => {
     }
 
     return (
+        <>
+        <Helm
+                title="Yeu Bake Shop"
+                ogTitle="Yeu Bake Shop"
+                description=""
+                ogDescription=""
+                link="/"
+                ogImage
+            />
         <section className="home-page">
             {overlayOpen && (
                 <section className="overlay">
                     <PhotoOpenOverlay
                         image={img}
                         title={title}
+                        vegan={vegan}
                         open={toggleOverlay}
                     />
                 </section>
@@ -101,6 +113,7 @@ const Index = () => {
             </div>
             <Buttons />
         </section>
+        </>
     );
 };
 

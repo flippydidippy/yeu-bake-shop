@@ -13,6 +13,9 @@
     width: 100vw;
     height: 100vh;
 
+    top: 0;
+    left: 0;
+
     background-color: black;
 
     .center {
@@ -42,7 +45,7 @@
                 font-size: 13px;
                 font-style: normal;
                 font-weight: 700;
-                line-height: 15px;
+                line-height: 1.2em;
                 letter-spacing: 0em;
                 text-align: left;
 
@@ -56,6 +59,11 @@
         
                 @include small_desktop {
                     font-size: 19px;
+                }
+
+                img {
+                    height: 1em;
+                    width: 1em;
                 }
             }
 

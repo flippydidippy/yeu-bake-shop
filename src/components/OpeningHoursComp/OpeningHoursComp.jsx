@@ -33,6 +33,7 @@ const OpeningHoursComp = ({ openingHoursData }) => {
                                 ? "main today"
                                 : "main"
                         }
+                        key={shortid.generate()}
                     >
                         <p>{hour.days}:</p>
                         <small>{hour.time}</small>
@@ -40,7 +41,7 @@ const OpeningHoursComp = ({ openingHoursData }) => {
                 ))}
                 <h1>Other hours</h1>
                 {openingHoursData[1].other.map((hour) => (
-                    <div className="other">
+                    <div className="other" key={shortid.generate()}>
                         <p>{hour.days}:</p>
                         <small>{hour.time}</small>
                     </div>

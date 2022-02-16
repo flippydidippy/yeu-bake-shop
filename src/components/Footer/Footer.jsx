@@ -18,7 +18,7 @@ const Footer = () => {
             </div>
             <div className="footer-copyright">
                 <div className="footer-copyright-box">
-                    <p>© 2022 Yeu Bake Shop</p>
+                    <p>© 2022 Yeu Bake Shop by Filip Dannevik</p>
                 </div>
             </div>
         </section>
