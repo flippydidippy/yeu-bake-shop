@@ -1,16 +1,18 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import OpeningHoursComp from "../../OpeningHoursComp/OpeningHoursComp";
 import Helm from "../../Helm/Helm";
 
 import Buttons from "../../Buttons/Buttons";
-import yaml from "js-yaml"
-
+import yaml from "js-yaml";
 
 import "./opening-hours.scss";
 
 const OpeningHours = () => {
-    
-    const [openingHoursData, setOpeningHoursData] = useState(defaultOpeningHoursData);
+    const [error, setError] = useState();
+    // GET OPENING HOURS DATA
+    const [openingHoursData, setOpeningHoursData] = useState(
+        defaultOpeningHoursData
+    );
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -19,7 +21,7 @@ const OpeningHours = () => {
                 const data = yaml.load(rawData);
                 setOpeningHoursData(data);
             } catch (e) {
-                
+                setError(e);
             }
         };
         fetchData();
@@ -27,7 +29,6 @@ const OpeningHours = () => {
 
     return (
         <>
-            
             <Helm
                 title="Opening Hours - Yeu Bake Shop"
                 ogTitle="Opening Hours - Yeu Bake Shop"
@@ -36,6 +37,9 @@ const OpeningHours = () => {
                 link="/opening-hours"
                 ogImage
             />
+
+            {error && "ERROR: " + error}
+
             <section className="opening-hours-page">
                 <OpeningHoursComp openingHoursData={openingHoursData} />
                 <Buttons />
@@ -43,8 +47,6 @@ const OpeningHours = () => {
         </>
     );
 };
-
-
 
 //DEFAULT OPENING HOURS DATA
 const defaultOpeningHoursData = [
@@ -93,6 +95,5 @@ const defaultOpeningHoursData = [
         ],
     },
 ];
-
 
 export default OpeningHours;

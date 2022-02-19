@@ -18,6 +18,7 @@ var vegan;
 
 
 const Menu = () => {
+    const [error, setError] = useState();
     //GET BAKE MENU
     const [bakeMenuData, setBakeMenuData] = useState([]);
     useEffect(() => {
@@ -27,7 +28,9 @@ const Menu = () => {
                 const rawData = await resp.text();
                 const data = yaml.load(rawData);
                 setBakeMenuData(data);
-            } catch (e) {}
+            } catch (e) {
+                setError(e);
+            }
         };
         fetchData();
     }, []);
@@ -41,7 +44,9 @@ const Menu = () => {
                 const rawData = await resp.text();
                 const data = yaml.load(rawData);
                 setMenuData(data);
-            } catch (e) {}
+            } catch (e) {
+                setError(e);
+            }
         };
         fetchData();
     }, []);
@@ -86,6 +91,7 @@ const Menu = () => {
 
     return (
         <>
+            
             <Helm
                 title="Menu - Yeu Bake Shop"
                 ogTitle="Menu - Yeu Bake Shop"
@@ -100,6 +106,9 @@ const Menu = () => {
                     <h1>Menu</h1>
                 </div>
             </header>
+
+            {error && ("ERROR: " + error)}
+
             <section className="menu-page-page">
                 <section
                     className="menu-page"

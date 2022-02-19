@@ -1,3 +1,14 @@
+# FÖR ATT LÄGGA TILL ETT MENU SET
+# Kopiera det som finns (från - title till slutet)
+# Ändra datab inuti
+
+# FÖR ATT LÄGGA TILL SAKER PÅ MENYN:
+# kopiera från en underdelning under "menuSet" (från -title till slutet på det objektet)
+# 
+# FÖR ATT ÄNDRA ICON PÅ EN MENYITEM:
+# ändra datasetet "icon" till namnet på din icon.
+# Lägg till iconen under foldern /icons
+
 - title: iced fruit tea & ade
   menuSet:
     - title: '"Yuzu-ade"'

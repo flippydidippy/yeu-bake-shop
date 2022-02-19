@@ -11,6 +11,7 @@ var month = new Date().getMonth() + 1; //To get the Current Month
 var year = new Date().getFullYear(); //To get the Current Year
 
 const TitleComp = ({ link }) => {
+    const [error, setError] = useState();
     //Get openingHoursData
     const [openingHoursData, setOpeningHoursData] = useState(
         defaultOpeningHoursData
@@ -22,7 +23,9 @@ const TitleComp = ({ link }) => {
                 const rawData = await resp.text();
                 const data = yaml.load(rawData);
                 setOpeningHoursData(data);
-            } catch (e) {}
+            } catch (e) {
+                setError(e);
+            }
         };
         fetchData();
     }, []);
@@ -74,6 +77,7 @@ const TitleComp = ({ link }) => {
 
     return (
         <section className="title-section">
+            {error && ("ERROR: " + error)}
             <div className="title-section-box">
                 <div className="title">
                     <h1>Yeu Bake Shop</h1>

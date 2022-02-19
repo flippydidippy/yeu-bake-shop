@@ -10,7 +10,8 @@ import yaml from "js-yaml"
 import "./bake-menu.scss";
 
 const BakeMenu = ({ bakeMenu, openPopUp }) => {
-    
+    const [error, setError] = useState();
+
     //GET DATA
     const [bakeMenuData, setBakeMenuData] = useState([]);
     useEffect(() => {
@@ -20,7 +21,9 @@ const BakeMenu = ({ bakeMenu, openPopUp }) => {
                 const rawData = await resp.text();
                 const data = yaml.load(rawData);
                 setBakeMenuData(data);
-            } catch (e) {}
+            } catch (e) {
+                setError(e);
+            }
         };
         fetchData();
     }, []);
@@ -31,6 +34,7 @@ const BakeMenu = ({ bakeMenu, openPopUp }) => {
 
     return (
         <section className="bake-menu">
+            {error && ("ERROR: " + error)}
             <Link className="title-box" to="/bake-menu">
                 <h2>Bake Menu</h2>
                 <p>(Wed-Sun)</p>
