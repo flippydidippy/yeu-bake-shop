@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import BakeMenu from "../../BakeMenu/BakeMenu";
-import bakeMenuData from "../../../data/bakeMenuData/bakeMenuData";
 import Helm from "../../Helm/Helm";
 
 import Buttons from "../../Buttons/Buttons";
@@ -10,11 +9,15 @@ import PhotoOpenOverlay from "../../PhotoOpenOverlay/PhotoOpenOverlay";
 
 import "./bake-menu-page.scss";
 
+
+
 var img;
 var title;
 var vegan;
 
 const BakeMenuPage = () => {
+    
+
     //popUp
     const [popUpOpen, setPopUpOpen] = useState(false);
     function openPopUp(i, t, v) {
@@ -72,7 +75,6 @@ const BakeMenuPage = () => {
                     />
                 )}
                 <BakeMenu
-                    bakeMenuData={bakeMenuData}
                     openPopUp={
                         window.innerWidth < 767
                             ? openPopUp

@@ -1,12 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import BakeMenuItem from "./BakeMenuItem/BakeMenuItem.jsx";
 import { Link } from "react-router-dom";
 import MobileArrow from "./MobileArrow/MobileArrow.jsx";
-import shortid from 'shortid';
+import shortid from "shortid";
+
+import yaml from "js-yaml"
 
 import "./bake-menu.scss";
 
-const BakeMenu = ({ bakeMenuData, openPopUp }) => {
+const BakeMenu = ({ bakeMenu, openPopUp }) => {
+    
+    //GET DATA
+    const [bakeMenuData, setBakeMenuData] = useState([]);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const resp = await fetch("/data/bakeMenuData.yaml");
+                const rawData = await resp.text();
+                const data = yaml.load(rawData);
+                setBakeMenuData(data);
+            } catch (e) {}
+        };
+        fetchData();
+    }, []);
+
+    
+
     const [isVisibleArrow, setIsVisibleArrow] = useState(true);
 
     return (
@@ -27,7 +47,7 @@ const BakeMenu = ({ bakeMenuData, openPopUp }) => {
                         />
                     ))}
                 </ul>
-                {(window.innerWidth < 767 && isVisibleArrow) && <MobileArrow />}
+                {window.innerWidth < 767 && isVisibleArrow && <MobileArrow />}
             </div>
         </section>
     );

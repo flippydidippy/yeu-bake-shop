@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import "./title-comp.scss";
+import yaml from "js-yaml";
 
-import openingHoursData from "../../data/openingHoursData/openingHoursData";
+import "./title-comp.scss";
 
 var hours = new Date().getHours() + new Date().getTimezoneOffset() / 60 + 1;
 var date = new Date().getDate(); //To get the Current Date
@@ -11,11 +11,27 @@ var month = new Date().getMonth() + 1; //To get the Current Month
 var year = new Date().getFullYear(); //To get the Current Year
 
 const TitleComp = ({ link }) => {
+    //Get openingHoursData
+    const [openingHoursData, setOpeningHoursData] = useState(
+        defaultOpeningHoursData
+    );
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const resp = await fetch("/data/openingHoursData.yaml");
+                const rawData = await resp.text();
+                const data = yaml.load(rawData);
+                setOpeningHoursData(data);
+            } catch (e) {}
+        };
+        fetchData();
+    }, []);
+
     function checkWeekDay(d, m, y) {
         var weekDay = new Date(y, m, d).getDay();
 
-        if(weekDay === 0) {
-            weekDay=6;
+        if (weekDay === 0) {
+            weekDay = 6;
         } else {
             weekDay--;
         }
@@ -70,9 +86,7 @@ const TitleComp = ({ link }) => {
                         <p>
                             Today:{" "}
                             {shortenTime(
-                                getOpeningTime(
-                                    checkWeekDay(date, month, year)
-                                )
+                                getOpeningTime(checkWeekDay(date, month, year))
                             ) +
                                 " - " +
                                 shortenTime(
@@ -84,7 +98,10 @@ const TitleComp = ({ link }) => {
                     </div>
                 </div>
                 <Link className="opening-hours" to={link}>
-                    <img src="/icons/icons8-xbox-menu-60.svg" alt="All opening hours icon" />
+                    <img
+                        src="/icons/icons8-xbox-menu-60.svg"
+                        alt="All opening hours icon"
+                    />
                     <p>All opening hours</p>
                 </Link>
                 <hr />
@@ -120,5 +137,53 @@ const TitleComp = ({ link }) => {
         </section>
     );
 };
+
+//DEFAULT OPENING HOURS DATA
+const defaultOpeningHoursData = [
+    {
+        regular: [
+            {
+                days: "",
+                time: "",
+            },
+            {
+                days: "",
+                time: "",
+            },
+            {
+                days: "",
+                time: "",
+            },
+            {
+                days: "",
+                time: "",
+            },
+            {
+                days: "",
+                time: "",
+            },
+            {
+                days: "",
+                time: "",
+            },
+            {
+                days: "",
+                time: "",
+            },
+        ],
+    },
+    {
+        other: [
+            {
+                days: "",
+                time: "",
+            },
+            {
+                days: "",
+                time: "",
+            },
+        ],
+    },
+];
 
 export default TitleComp;

@@ -9,8 +9,6 @@ import Helm from "../../Helm/Helm";
 
 import "./index.scss";
 
-import bakeMenuData from "../../../data/bakeMenuData/bakeMenuData";
-
 import Buttons from "../../Buttons/Buttons";
 
 var img;
@@ -74,7 +72,7 @@ const Index = () => {
                     toggleOverlay={toggleOverlay}
                 />
             )}
-            <BakeMenu bakeMenuData={bakeMenuData} openPopUp={(window.innerWidth < 767) ? openPopUp : toggleOverlayDirect} />
+            <BakeMenu openPopUp={(window.innerWidth < 767) ? openPopUp : toggleOverlayDirect} />
             <TitleComp link="/opening-hours" />
             <div className="description">
                 <div className="instagram">

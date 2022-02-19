@@ -1,38 +1,50 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import Buttons from "../../Buttons/Buttons";
 import BakeMenu from "../../BakeMenu/BakeMenu";
 import Helm from "../../Helm/Helm";
 
-import yaml from "js-yaml";
-
 import PopUpWindow from "../../PopUpWindow/PopUpWindow";
 import PhotoOpenOverlay from "../../PhotoOpenOverlay/PhotoOpenOverlay";
 
-import bakeMenuData from "../../../data/bakeMenuData/bakeMenuData";
-import menuData from "../../../data/menuData/menuData";
-
 import shortid from "shortid";
+import yaml from "js-yaml"
 
 import "./menu.scss";
-
-
 
 var img;
 var title;
 var vegan;
 
-const Menu = () => {
-    //GET DATA
-    useEffect(() => {
-        try {
-            const doc = yaml.load(fetch("./menuData.yml"));
-            console.log(doc);
-        } catch (e) {
-            console.log(e);
-        }
-    }, [])
 
+
+const Menu = () => {
+    //GET BAKE MENU
+    const [bakeMenuData, setBakeMenuData] = useState([]);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const resp = await fetch("/data/bakeMenuData.yaml");
+                const rawData = await resp.text();
+                const data = yaml.load(rawData);
+                setBakeMenuData(data);
+            } catch (e) {}
+        };
+        fetchData();
+    }, []);
+
+    //GET MENU DATA
+    const [menuData, setMenuData] = useState([]);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const resp = await fetch("/data/menuData.yaml");
+                const rawData = await resp.text();
+                const data = yaml.load(rawData);
+                setMenuData(data);
+            } catch (e) {}
+        };
+        fetchData();
+    }, []);
 
     //popUp
     const [popUpOpen, setPopUpOpen] = useState(false);
@@ -64,13 +76,13 @@ const Menu = () => {
     const [height, setHeight] = useState(0);
     const elementRef = useRef(null);
 
+    
+
     useEffect(() => {
         setHeight(elementRef.current.clientHeight);
-    }, []); //empty dependency array so it only runs once at render
+    }, [bakeMenuData]); //empty dependency array so it only runs once at render
 
-
-
-
+    
 
     return (
         <>
@@ -82,6 +94,7 @@ const Menu = () => {
                 link="/menu"
                 ogImage
             />
+
             <header className="menu-title-fix">
                 <div className="title-box">
                     <h1>Menu</h1>
@@ -147,7 +160,7 @@ const Menu = () => {
                     )}
                     <div className="bake-menu-page-fixed" ref={elementRef}>
                         <BakeMenu
-                            bakeMenuData={bakeMenuData}
+                            bakeMenu={bakeMenuData}
                             openPopUp={
                                 window.innerWidth < 767
                                     ? openPopUp
