@@ -12,9 +12,9 @@ const Page404 = () => {
                 link
                 ogImage
             />
-            <section className="404">
+            <section className="404" style={{textAlign: "center"}}>
                 <h1>Error Page. 404.</h1>
-                <a href="yeubakeshop.se">Press to here come back!</a>
+                <a href="/">Press to here come back!</a>
             </section>
         </>
     );
