@@ -16,6 +16,7 @@
             justify-content: space-between;
             align-items: center;
             position: relative;
+            height: 100%;
 
             .icon {
                 img {
@@ -30,6 +31,8 @@
 
             .title-box {
                 position: relative;
+                width: 100%;
+                
                 h1 {
                     font-family: "Patrick Hand SC";
                     text-transform: uppercase;
@@ -50,6 +53,26 @@
                     height: 1px;
                     border: 0;
                 }
+                .img {
+                    display: flex;
+                    justify-content: space-between;
+                    
+                    margin: 0 5%;
+
+                    margin-top: -10px;
+                    img {
+                        
+                        
+                        object-fit: contain;
+                        max-height: 32px;
+
+                        &:last-child {
+                            transform: rotate(45deg) ;
+                            
+                        }
+                    }
+                }   
+                
             }
         }
     }

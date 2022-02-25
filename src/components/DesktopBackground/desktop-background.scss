@@ -1,0 +1,112 @@
+@import "../../sass/abstracts/";
+
+.desktop-background {
+    position: absolute;
+    z-index: 0;
+
+    margin-top: 80px;
+    width: 100%;
+
+    @include tablet {
+        .left-container,
+        .right-container {
+            & > * {
+                transition: 1s ease-in-out;
+
+                &:hover {
+                    transform: rotate(10deg) !important;
+                }
+            }
+        }
+
+        .left-container {
+            position: absolute;
+            width: calc((100vw - 1080px + 80px) / 2);
+            height: 100vh;
+
+            .top-corner {
+                width: 100px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: rotate(-45deg);
+            }
+            .middle-center {
+                width: 48px;
+                position: absolute;
+                top: 20%;
+                left: 50%;
+
+                transform: scale(-1) rotate(180deg) translate(-50%, -50%)
+                    translateX(-20px);
+                animation: blink 30s ease-in-out 30s infinite alternate;
+
+                @include desktop {
+                    width: 32px;
+                    top: calc(50% + 20vh);
+                }
+
+            }
+        }
+
+        .right-container {
+            position: absolute;
+            right: 0;
+            width: calc((100vw - 1080px + 80px) / 2);
+            height: 100vh;
+
+            .top-corner {
+                width: 100px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: rotate(45deg);
+            }
+            .middle-center {
+                width: 64px;
+                position: absolute;
+                top: 20%;
+                left: 50%;
+
+                transform: rotate(0deg) translate(-50%, -50%) translateX(33px);
+                animation: blink 48s ease-in-out 48s infinite alternate;
+
+                @include desktop {
+                    width: 32px;
+                    top: calc(50% + 20vh);
+                }
+            }
+            @keyframes blink {
+                0% {
+                    opacity: 0.5;
+                }
+                10% {
+                    opacity: 0.3;
+                }
+                20% {
+                    opacity: 0.8;
+                }
+                30% {
+                    opacity: 0.2;
+                }
+                40% {
+                    opacity: 0.5;
+                }
+                50% {
+                    opacity: 0.4;
+                }
+                60% {
+                    opacity: 1;
+                }
+                70% {
+                    opacity: 0.1;
+                }
+                100% {
+                    opacity: 0.4;
+                }
+            }
+
+            
+        }
+    }
+}

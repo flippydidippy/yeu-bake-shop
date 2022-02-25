@@ -6,7 +6,7 @@ import NavBarFix from "../NavBarFix/NavBarFix";
 
 import "./menu.scss";
 
-const Menu = ({ toggleOpen, menuIcon, withTitle }) => {
+const Menu = ({ toggleOpen, menuIcon, withTitle, withIcons }) => {
     return (
         <div className="menu-menu">
             <div className="max-width">
@@ -14,6 +14,7 @@ const Menu = ({ toggleOpen, menuIcon, withTitle }) => {
                     onClick={toggleOpen}
                     menuIcon={menuIcon}
                     withTitle={withTitle}
+                    withIcons={withIcons}
                 />
                 <div className="menu-box">
                     <ul>
@@ -50,7 +51,10 @@ const Menu = ({ toggleOpen, menuIcon, withTitle }) => {
                     </ul>
                 </div>
                 <div className="copyright">
-                    <MenuItem title="© 2022 Yeu Bake Shop by Filip Dannevik" link="/"></MenuItem>
+                    <MenuItem
+                        title="© 2022 Yeu Bake Shop by Filip Dannevik"
+                        link="/"
+                    ></MenuItem>
                 </div>
                 <div className="footer-icons">
                     <a href="https://www.instagram.com/yeubakeshop">
@@ -60,6 +64,13 @@ const Menu = ({ toggleOpen, menuIcon, withTitle }) => {
                         <img src="/icons/icons8-facebook.svg" alt="" />
                     </a>
                 </div>
+                {window.innerWidth > 1500 && (
+                    <div className="desktop-extra-icons">
+                        <img className="left-icon" src="/icons/plant_icon.jpg" alt="" />
+                        <img className="right-icon" src="/icons/flowers_icon.jpg" alt="" />
+                        <img className="right-right-icon" src="/icons/cheesecake_icon.jpg" alt="" />
+                    </div>
+                )}
             </div>
         </div>
     );

@@ -9,21 +9,23 @@
 
 - regular:
     - days: Monday
-      time: '12:00-18:00'
+      time: 'Closed'
     - days: Tuesday
-      time: '12:00-18:00'
+      time: 'Closed'
     - days: Wednesday
       time: '12:00-18:00'
     - days: Thursday
       time: '12:00-18:00'
     - days: Friday
-      time: '12:00-18:00'
+      time: 'Closed'
     - days: Saturday
-      time: '12:00-20:00'
+      time: '12:00-18:00'
     - days: Sunday
       time: '12:00-17:00'
 - other:
     - days: Chirstmas day
       time: Closed
+      date: 2/25/22
     - days: Christmas eve
       time: Closed
+      date: 2/24/22

@@ -29,13 +29,14 @@ const NavBar = () => {
                     </div>
                 </CSSTransition>
             ) : (
-                <Menu />
+                <Menu/>
             )}
-            <NavBarFix
+            <NavBarFix 
                 onClick={() => {
                     setOpen(!open);
                 }}
                 menuIcon={!open}
+                withIcons
             />
             <div className="space" />
         </header>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import NavMenuBtn from "../NavMenuBtn/NavMenuBtn";
 
-const NavBarFix = ({ onClick, menuIcon, withTitle }) => {
+const NavBarFix = ({ onClick, menuIcon, withTitle, withIcons }) => {
     return (
         <div className="navbar-fix">
             <div className="navbar-fix-box">
@@ -28,6 +28,14 @@ const NavBarFix = ({ onClick, menuIcon, withTitle }) => {
                     <Link className="title-box" to="/" onClick={onClick}>
                         <h1>Yeu Bake Shop</h1>
                         <hr />
+                    </Link>
+                )}
+                {withIcons && (
+                    <Link className="title-box" to="/" onClick={onClick}>
+                        <div className="img">
+                            <img src="/icons/plant_icon.jpg" alt="" />
+                            <img src="/icons/plant_icon.jpg" alt="" />
+                        </div>
                     </Link>
                 )}
                 <nav className="menu">

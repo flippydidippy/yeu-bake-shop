@@ -41,14 +41,16 @@ const TitleComp = ({ link }) => {
 
         return weekDay;
     }
+    
+    function getHours(day) {
+        return openingHoursData[0].regular[day].time;
+    }
 
     function getOpeningTime(day) {
-        const time = openingHoursData[0].regular[day].time;
-        return time.slice(0, time.indexOf("-"));
+        return getHours(day).slice(0, getHours(day).indexOf("-"));
     }
     function getClosingTime(day) {
-        const time = openingHoursData[0].regular[day].time;
-        return time.slice(time.indexOf("-") + 1);
+        return getHours(day).slice(getHours(day).indexOf("-") + 1);
     }
 
     function getHour(time) {
@@ -75,9 +77,20 @@ const TitleComp = ({ link }) => {
         return "Closed";
     }
 
+    function getTime() {
+        
+        if(getHours(checkWeekDay(date, month, year)).toLocaleLowerCase() === "closed") {
+            return "Closed";
+        } else {
+            return shortenTime(getOpeningTime(checkWeekDay(date, month, year))) + " - " + shortenTime(getClosingTime(checkWeekDay(date, month, year)));
+        }
+
+        
+    }
+
     return (
         <section className="title-section">
-            {error && ("ERROR: " + error)}
+            {error && "ERROR: " + error}
             <div className="title-section-box">
                 <div className="title">
                     <h1>Yeu Bake Shop</h1>
@@ -89,15 +102,7 @@ const TitleComp = ({ link }) => {
                     <div className="hours-box">
                         <p>
                             Today:{" "}
-                            {shortenTime(
-                                getOpeningTime(checkWeekDay(date, month, year))
-                            ) +
-                                " - " +
-                                shortenTime(
-                                    getClosingTime(
-                                        checkWeekDay(date, month, year)
-                                    )
-                                )}
+                            {getTime()}
                         </p>
                     </div>
                 </div>

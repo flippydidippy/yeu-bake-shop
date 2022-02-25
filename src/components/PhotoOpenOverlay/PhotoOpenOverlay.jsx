@@ -2,12 +2,18 @@ import React from 'react'
 import './photoopenoverlay.scss';
 
 const PhotoOpenOverlay = ({title, image, alt, vegan, open}) => {
+    if(vegan === "true" || vegan === true) {
+        vegan = (<> <img src="/icons/16px-Vegetarian-mark.svg.png" alt="Vegan icon" /></>)
+    } else if (vegan != null) {
+        vegan = (<> <img src={vegan} alt="icon" /></>)
+    }
+
     return (
         <div className="photo-open-overlay">
             <div className="center">
                 <div className="gradient"/>
                 <div className="title">
-                    <h5>{title} {vegan && <> <img src="/icons/16px-Vegetarian-mark.svg.png" alt="Vegan icon" /></>}</h5>
+                    <h5>{title}{vegan && (vegan)}</h5>
                     <p>{alt}</p>
                 </div>
                 <div className="close-button">

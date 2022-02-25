@@ -7,15 +7,13 @@ import PopUpWindow from "../../PopUpWindow/PopUpWindow";
 import PhotoOpenOverlay from "../../PhotoOpenOverlay/PhotoOpenOverlay";
 
 import shortid from "shortid";
-import yaml from "js-yaml"
+import yaml from "js-yaml";
 
 import "./menu.scss";
 
 var img;
 var title;
 var vegan;
-
-
 
 const Menu = () => {
     const [error, setError] = useState();
@@ -81,17 +79,14 @@ const Menu = () => {
     const [height, setHeight] = useState(0);
     const elementRef = useRef(null);
 
-    
-
     useEffect(() => {
         setHeight(elementRef.current.clientHeight);
     }, [bakeMenuData]); //empty dependency array so it only runs once at render
 
-    
+    //click outside of popupwindow
 
     return (
         <>
-            
             <Helm
                 title="Menu - Yeu Bake Shop"
                 ogTitle="Menu - Yeu Bake Shop"
@@ -107,7 +102,7 @@ const Menu = () => {
                 </div>
             </header>
 
-            {error && ("ERROR: " + error)}
+            {error && "ERROR: " + error}
 
             <section className="menu-page-page">
                 <section
@@ -127,19 +122,49 @@ const Menu = () => {
                                     <div
                                         className="menu-sort-item"
                                         key={shortid.generate()}
+                                        onClick={() =>
+                                            menuItem.img &&
+                                            (window.innerWidth < 767
+                                                ? openPopUp(
+                                                      menuItem.img,
+                                                      menuItem.title,
+                                                      menuItem.icon
+                                                  )
+                                                : toggleOverlayDirect(
+                                                      menuItem.img,
+                                                      menuItem.title,
+                                                      menuItem.icon
+                                                  ))
+                                        }
                                     >
-                                        <div className="menu-sort-item-title">
-                                            <h3>{menuItem.title}</h3>
-                                            <p>{menuItem.price}</p>
-                                            {menuItem.icon && (
-                                                <img
-                                                    src={menuItem.icon}
-                                                    alt="Menu Item icon"
-                                                />
-                                            )}
+                                        <div className="menu-sort-item-container">
+                                            <div className="menu-sort-item-container-title">
+                                                <h3>{menuItem.title}</h3>
+                                                <p>{menuItem.price}</p>
+                                                {menuItem.icon && (
+                                                    <img
+                                                        src={menuItem.icon}
+                                                        alt="Menu Item icon"
+                                                    />
+                                                )}
+                                            </div>
+                                            <div className="menu-sort-item-container-desc">
+                                                <p>{menuItem.desc}</p>
+                                            </div>
                                         </div>
-                                        <div className="menu-sort-item-desc">
-                                            <p>{menuItem.desc}</p>
+
+                                        <div className="menu-sort-item-container">
+                                            <div className="menu-sort-item-container-img">
+                                                {menuItem.img && (
+                                                    <img
+                                                        src={menuItem.img}
+                                                        alt={
+                                                            menuItem.title +
+                                                            " illustration"
+                                                        }
+                                                    />
+                                                )}
+                                            </div>
                                         </div>
                                     </div>
                                 ))}

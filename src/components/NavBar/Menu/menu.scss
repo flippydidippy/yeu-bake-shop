@@ -14,8 +14,12 @@
     animation: color 5s linear 2s infinite alternate;
 
     @keyframes color {
-        from {border: 5px solid #ffe7f9;}
-        to {border: 5px solid #d7b4d8;}
+        from {
+            border: 5px solid #ffe7f9;
+        }
+        to {
+            border: 5px solid #d7b4d8;
+        }
     }
 
     @include tablet {
@@ -23,7 +27,6 @@
     }
 
     .max-width {
-
         @include tablet {
             display: flex;
             align-items: center;
@@ -31,7 +34,6 @@
             max-width: $normal_max_width;
             margin: 0 auto;
             height: 100%;
-            
         }
 
         .navbar-fix {
@@ -53,7 +55,7 @@
                         margin: 0 5px !important;
                     }
                 }
-                
+
                 width: 0;
             }
         }
@@ -129,12 +131,10 @@
 
                     &:hover {
                         text-decoration: underline;
-                        
                     }
 
                     @include tablet {
                         margin: 0;
-                        
                     }
 
                     a {
@@ -177,7 +177,8 @@
                             height: calc(min(30px, 5vh));
                             margin-left: calc(min(5.5vw, 22px));
 
-                            filter: invert(99%) sepia(80%) saturate(1456%) hue-rotate(191deg) brightness(84%) contrast(88%);
+                            filter: invert(99%) sepia(80%) saturate(1456%)
+                                hue-rotate(191deg) brightness(84%) contrast(88%);
                         }
                     }
                 }
@@ -202,17 +203,47 @@
         .footer-icons {
             position: absolute;
 
-            bottom: calc(max(5vh,20px));
-            right: calc(max(6.66vw,20px));
+            bottom: calc(max(5vh, 20px));
+            right: calc(max(6.66vw, 20px));
 
             img {
                 height: calc(min(60px, 10vh));
             }
 
-            filter: invert(99%) sepia(80%) saturate(1456%) hue-rotate(191deg) brightness(84%) contrast(88%);
+            filter: invert(99%) sepia(80%) saturate(1456%) hue-rotate(191deg)
+                brightness(84%) contrast(88%);
 
             @include tablet {
                 display: none;
+            }
+        }
+
+        .desktop-extra-icons {
+            display: none;
+            @include desktop {
+                display: block;
+                position: absolute;
+                width: 100%;
+                top: 0;
+
+                .left-icon {
+                    position: absolute;
+                    height: 24px;
+                    left: 9%;
+                    top: 30px;
+                }
+                .right-icon {
+                    position: absolute;
+                    height: 32px;
+                    right: 9%;
+                    top: 10px;
+                }
+                .right-right-icon {
+                    position: absolute;
+                    height: 54px;
+                    right: calc(7% - 80px);
+                    top: 20px;
+                }
             }
         }
     }

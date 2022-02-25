@@ -11,6 +11,7 @@ import {
     BakeMenuPage,
     Menu,
     Footer,
+    DesktopBackground
 } from "./components";
 
 // import ScrollToTop from "./components/hooks/ScrollToTop"
@@ -18,6 +19,7 @@ import {
 const App = () => {
     return (
         <>
+            {window.innerWidth > 767 && <DesktopBackground/>}
             <NavBar />
             <Routes>
                 <Route path="/" exact element={<Index />} />

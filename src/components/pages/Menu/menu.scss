@@ -34,11 +34,17 @@
         height: unset;
         display: flex;
         margin: 0 3vw;
+        flex: 1;
     }
 
     &-box {
         @include tablet {
             margin: 0 3vw;
+            max-width: calc(50% - 6vw);
+        }
+        @include small_desktop {
+            margin: 0 24px;
+            max-width: calc(50% - 48px);
         }
         @include small_height {
             &:last-child {
@@ -62,47 +68,82 @@
         .menu-sort {
             margin-top: 1em;
             &-item {
-                margin-bottom: 1em;
-                &-title {
-                    display: flex;
+                padding-bottom: 1.5em;
+                display: flex;
+                justify-content: space-between;
+                flex: 1;
+                cursor: pointer;
 
-                    h3 {
-                        font-family: Roboto;
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 500;
-                        line-height: 16px;
-                        letter-spacing: 0.04em;
-                        text-align: left;
-                        margin-right: 1em;
+                @supports (gap: 1em) {
+                    gap: 1em;
+                }
+                
+                &-container {
+                    
+                    height: 100%;
+
+                    &-title {
+                        height: 100%;
+                        display: flex;
+    
+                        h3 {
+                            font-family: Roboto;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 16px;
+                            letter-spacing: 0.04em;
+                            text-align: left;
+                            margin-right: 1em;
+                        }
+                        p {
+                            font-family: Roboto;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 300;
+                            line-height: 16px;
+                            letter-spacing: 0.04em;
+                            text-align: left;
+                            margin-right: 1em;
+                        }
+                        img {
+                            width: 16px;
+                        }
                     }
-                    p {
-                        font-family: Roboto;
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 300;
-                        line-height: 16px;
-                        letter-spacing: 0.04em;
-                        text-align: left;
-                        margin-right: 1em;
+                    &-desc {
+                    
+                        margin-top: 0.5em;
+                        p {
+                            font-family: Roboto;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 300;
+                            line-height: 16px;
+                            letter-spacing: 0.04em;
+                            text-align: left;
+                        }
                     }
-                    img {
-                        width: 16px;
+    
+                    &-img {
+                        
+                        max-width: 84px;
+                        margin: 0;
+                        float: right;
+                        flex: 2;
+                        max-height: 84px;
+                        
+                        position: relative;                        
+                        img {
+                            width: calc(min(84px, 22vw));
+                            max-width: 84px;
+                            object-fit: contain;
+                        }
+                        
                     }
                 }
+                
 
-                &-desc {
-                    margin-top: 0.5em;
-                    p {
-                        font-family: Roboto;
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 300;
-                        line-height: 16px;
-                        letter-spacing: 0.04em;
-                        text-align: left;
-                    }
-                }
+                
             }
         }
     }
