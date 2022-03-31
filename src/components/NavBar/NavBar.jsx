@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import "./navbar.scss";
+import useWindowDimensions from "../hooks/useWindowDimension";
+
 import Menu from "./Menu/Menu";
 import { CSSTransition } from "react-transition-group";
 import NavBarFix from "./NavBarFix/NavBarFix";
+
+import "./navbar.scss";
 
 const NavBar = () => {
     const [open, setOpen] = useState(false);
@@ -11,9 +14,16 @@ const NavBar = () => {
         setOpen(!open);
     }
 
+    const { width } = useWindowDimensions();
+
     return (
         <header className="navbar">
-            {window.innerWidth < 767 ? (
+            <div className="desktop">
+                <Menu/>
+            </div>
+            
+            
+            {width < 767 && (
                 <CSSTransition
                     in={open === true}
                     unmountOnExit
@@ -28,8 +38,6 @@ const NavBar = () => {
                         />
                     </div>
                 </CSSTransition>
-            ) : (
-                <Menu/>
             )}
             <NavBarFix 
                 onClick={() => {

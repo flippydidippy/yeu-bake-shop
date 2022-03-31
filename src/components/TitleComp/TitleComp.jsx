@@ -108,7 +108,7 @@ const TitleComp = ({ link }) => {
                 </div>
                 <Link className="opening-hours" to={link}>
                     <img
-                        src="/icons/icons8-xbox-menu-60.svg"
+                        src="/icon/icon8-xbox-menu-60.svg"
                         alt="All opening hours icon"
                     />
                     <p>All opening hours</p>

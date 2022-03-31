@@ -3,7 +3,7 @@ import './photoopenoverlay.scss';
 
 const PhotoOpenOverlay = ({title, image, alt, vegan, open}) => {
     if(vegan === "true" || vegan === true) {
-        vegan = (<> <img src="/icons/16px-Vegetarian-mark.svg.png" alt="Vegan icon" /></>)
+        vegan = (<> <img src="/icon/16px-Vegetarian-mark.svg.png" alt="Vegan icon" /></>)
     } else if (vegan != null) {
         vegan = (<> <img src={vegan} alt="icon" /></>)
     }

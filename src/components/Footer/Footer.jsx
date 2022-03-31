@@ -9,10 +9,10 @@ const Footer = () => {
             <div className="footer-social-media">
                 <div className="footer-icons">
                     <a href="https://www.instagram.com/yeubakeshop">
-                        <img src="/icons/icons8-instagram.svg" alt="" />
+                        <img src="/icon/icon8-instagram.svg" alt="" />
                     </a>
                     <a href="https://www.facebook.com/yeubakeshop">
-                        <img src="/icons/icons8-facebook.svg" alt="" />
+                        <img src="/icon/icon8-facebook.svg" alt="" />
                     </a>
                 </div>
             </div>

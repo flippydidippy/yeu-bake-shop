@@ -33,8 +33,8 @@ const NavBarFix = ({ onClick, menuIcon, withTitle, withIcons }) => {
                 {withIcons && (
                     <Link className="title-box" to="/" onClick={onClick}>
                         <div className="img">
-                            <img src="/icons/plant_icon.jpg" alt="" />
-                            <img src="/icons/plant_icon.jpg" alt="" />
+                            <img src="/icon/plant_icon.jpg" alt="" />
+                            <img src="/icon/plant_icon.jpg" alt="" />
                         </div>
                     </Link>
                 )}

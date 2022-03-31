@@ -5,7 +5,7 @@ const BakeMenuItem = ({ img, title, vegan, openPopUp }) => {
         <li className="bake-menu-item" onClick={() => openPopUp(img, title, vegan)}>
             <img src={img} alt={title} />
             <div className="click-me" />
-            <p>{title}{vegan && <> <img src="/icons/16px-Vegetarian-mark.svg.png" alt="Vegan icon" /></>}</p>
+            <p>{title}{vegan && <> <img src="/icon/16px-Vegetarian-mark.svg.png" alt="Vegan icon" /></>}</p>
         </li>
     );
 };

@@ -4,7 +4,7 @@ import "./pop-up-window.scss";
 
 const PopUpWindow = ({ title, vegan, img, togglePopUp, toggleOverlay }) => {
     if(vegan === "true" || vegan === true) {
-        vegan = (<> <img src="/icons/16px-Vegetarian-mark.svg.png" alt="Vegan icon" /></>)
+        vegan = (<> <img src="/icon/16px-Vegetarian-mark.svg.png" alt="Vegan icon" /></>)
     } else if (vegan != null) {
         vegan = (<> <img src={vegan} alt="icon" /></>)
     }

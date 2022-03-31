@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import MenuItem from "./MenuItem/MenuItem";
 import NavBarFix from "../NavBarFix/NavBarFix";
 
-import "./menu.scss";
+
 
 const Menu = ({ toggleOpen, menuIcon, withTitle, withIcons }) => {
     return (
@@ -21,31 +21,31 @@ const Menu = ({ toggleOpen, menuIcon, withTitle, withIcons }) => {
                         <MenuItem
                             title="Weekly bake menu"
                             link="/bake-menu"
-                            icon="/icons/icons8-kawaii-bread-60.svg"
+                            icon="/icon/icon8-kawaii-bread-60.svg"
                             toggleOpen={toggleOpen}
                         ></MenuItem>
                         <MenuItem
                             title="Opening hours"
                             link="/opening-hours"
-                            icon="/icons/icons8-open-sign-60.svg"
+                            icon="/icon/icon8-open-sign-60.svg"
                             toggleOpen={toggleOpen}
                         ></MenuItem>
                         <MenuItem
                             title="Find us"
                             link="/find-us"
-                            icon="/icons/icons8-home-address-60.svg"
+                            icon="/icon/icon8-home-address-60.svg"
                             toggleOpen={toggleOpen}
                         ></MenuItem>
                         <MenuItem
                             title="Contact"
                             link="/contact"
-                            icon="/icons/icons8-communication-100.svg"
+                            icon="/icon/icon8-communication-100.svg"
                             toggleOpen={toggleOpen}
                         ></MenuItem>
                         <MenuItem
                             title="Menu"
                             link="/menu"
-                            icon="/icons/icons8-soup-plate-60.svg"
+                            icon="/icon/icon8-soup-plate-60.svg"
                             toggleOpen={toggleOpen}
                         ></MenuItem>
                     </ul>
@@ -58,17 +58,17 @@ const Menu = ({ toggleOpen, menuIcon, withTitle, withIcons }) => {
                 </div>
                 <div className="footer-icons">
                     <a href="https://www.instagram.com/yeubakeshop">
-                        <img src="/icons/icons8-instagram.svg" alt="" />
+                        <img src="/icon/icon8-instagram.svg" alt="" />
                     </a>
                     <a href="https://www.facebook.com/yeubakeshop">
-                        <img src="/icons/icons8-facebook.svg" alt="" />
+                        <img src="/icon/icon8-facebook.svg" alt="" />
                     </a>
                 </div>
                 {window.innerWidth > 1500 && (
                     <div className="desktop-extra-icons">
-                        <img className="left-icon" src="/icons/plant_icon.jpg" alt="" />
-                        <img className="right-icon" src="/icons/flowers_icon.jpg" alt="" />
-                        <img className="right-right-icon" src="/icons/cheesecake_icon.jpg" alt="" />
+                        <img className="left-icon" src="/icon/plant_icon.jpg" alt="" />
+                        <img className="right-icon" src="/icon/flowers_icon.jpg" alt="" />
+                        <img className="right-right-icon" src="/icon/cheesecake_icon.jpg" alt="" />
                     </div>
                 )}
             </div>

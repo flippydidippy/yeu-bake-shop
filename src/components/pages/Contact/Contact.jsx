@@ -27,7 +27,7 @@ const Contact = () => {
                                 href="https://www.facebook.com/yeubakeshop"
                             >
                                 <img
-                                    src="/icons/icons8-facebook.svg"
+                                    src="/icon/icon8-facebook.svg"
                                     alt="facebook"
                                 />
                                 <small>@yeubakeshop</small>
@@ -37,7 +37,7 @@ const Contact = () => {
                                 href="https://www.instagram.com/yeubakeshop"
                             >
                                 <img
-                                    src="/icons/icons8-instagram.svg"
+                                    src="/icon/icon8-instagram.svg"
                                     alt="instagram "
                                 />
                                 <small>@yeubakeshop</small>
@@ -55,7 +55,7 @@ const Contact = () => {
                             <p>We look forward to your next visit!</p>
                             <Link className="img" to="/">
                                 <img
-                                    src="/icons/icons8-back-arrow-60_1.svg"
+                                    src="/icon/icon8-back-arrow-60_1.svg"
                                     alt="Go back Icon"
                                 />
                             </Link>

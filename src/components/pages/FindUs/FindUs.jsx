@@ -32,7 +32,7 @@ const FindUs = () => {
                                 <CtaBtn1
                                     btnText="Google maps"
                                     link="https://goo.gl/maps/4mFqARPX86kCWrUi9"
-                                    icon="/icons/icons8-google.svg"
+                                    icon="/icon/icon8-google.svg"
                                     btnRectStyle={{ backgroundColor: "white" }}
                                     btnTextStyle={{ color: "black" }}
                                     href
@@ -40,7 +40,7 @@ const FindUs = () => {
                                 <CtaBtn1
                                     btnText="Maps"
                                     link="http://maps.apple.com/?daddr=Yeu+Bake+Shop"
-                                    icon="/icons/icons8-apple-logo.svg"
+                                    icon="/icon/icon8-apple-logo.svg"
                                     btnRectStyle={{ backgroundColor: "white" }}
                                     btnTextStyle={{ color: "black" }}
                                     href
@@ -59,7 +59,7 @@ const FindUs = () => {
                             <p>We look forward to your visit!</p>
                             <Link className="img" to="/">
                                 <img
-                                    src="/icons/icons8-back-arrow-60_1.svg"
+                                    src="/icon/icon8-back-arrow-60_1.svg"
                                     alt="Go back Icon"
                                 />
                             </Link>
@@ -70,7 +70,7 @@ const FindUs = () => {
                                 href="https://www.facebook.com/yeubakeshop"
                             >
                                 <img
-                                    src="/icons/icons8-facebook.svg"
+                                    src="/icon/icon8-facebook.svg"
                                     alt="facebook"
                                 />
                                 <small>@yeubakeshop</small>
@@ -80,7 +80,7 @@ const FindUs = () => {
                                 href="https://www.instagram.com/yeubakeshop"
                             >
                                 <img
-                                    src="/icons/icons8-instagram.svg"
+                                    src="/icon/icon8-instagram.svg"
                                     alt="instagram "
                                 />
                                 <small>@yeubakeshop</small>

@@ -17,7 +17,7 @@ const Buttons = ({btn2Text, btn2Link}) => {
                 <HalfScreenBtn
                     btnText="Find us"
                     link="/find-us"
-                    icon="/icons/icons8-home-address-60.svg"
+                    icon="/icon/icon8-home-address-60.svg"
                     btnRectStyle={{ backgroundColor: "white" }}
                     btnTextStyle={{ color: "black" }}
                 />

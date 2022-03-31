@@ -7,7 +7,7 @@
 # 
 # FÖR ATT ÄNDRA ICON PÅ EN MENYITEM:
 # ändra datasetet "icon" till namnet på din icon.
-# Lägg till iconen under foldern /icons
+# Lägg till iconen under foldern /icon
 
 - title: bubble tea
   menuSet:
@@ -19,7 +19,7 @@
     - title: Matcha Strawberry Latte
       price: 45
       desc: Citrus ade with traditional Korean yuja-cheong (uzu marmalade), soda water and sweetly preserved lemon slices.
-      icon: /icons/icons8-heart.gif
+      icon: /icon/icon8-heart.gif
       img: /images/Untitled_Artwork 2.jpg
     - title: Matcha Bubble Tea
       price: 45
@@ -41,7 +41,7 @@
     - title: '"Yuzu-ade"'
       price: 45
       desc: Citrus ade with traditional Korean yuja-cheong (uzu marmalade), soda water and sweetly preserved lemon slices.
-      icon: /icons/icons8-heart.gif
+      icon: /icon/icon8-heart.gif
       img: 
     - title: '"Pink Lemonade"'
       price: 45
