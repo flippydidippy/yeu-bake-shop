@@ -31,7 +31,7 @@ const TitleComp = ({ link }) => {
     }, []);
 
     function checkWeekDay(d, m, y) {
-        var weekDay = new Date(y, m, d).getDay();
+        var weekDay = new Date(m + " " + d + " " + y).getDay();
 
         if (weekDay === 0) {
             weekDay = 6;

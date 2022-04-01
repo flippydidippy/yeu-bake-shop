@@ -5,6 +5,7 @@ import Helm from "../../Helm/Helm";
 
 import PopUpWindow from "../../PopUpWindow/PopUpWindow";
 import PhotoOpenOverlay from "../../PhotoOpenOverlay/PhotoOpenOverlay";
+import useWindowDimensions from "../../hooks/useWindowDimension";
 
 import shortid from "shortid";
 import yaml from "js-yaml";
@@ -81,17 +82,20 @@ const Menu = () => {
 
     useEffect(() => {
         setHeight(elementRef.current.clientHeight);
-    }, [bakeMenuData]); //empty dependency array so it only runs once at render
+    }, [bakeMenuData]); 
 
     //click outside of popupwindow
+
+    //width get
+    const { width } = useWindowDimensions();
 
     return (
         <>
             <Helm
                 title="Menu - Yeu Bake Shop"
                 ogTitle="Menu - Yeu Bake Shop"
-                description=""
-                ogDescription=""
+                description="Milk tea, fruit ades and iced tea, coffee."
+                ogDescription="Milk tea, fruit ades and iced tea, coffee."
                 link="/menu"
                 ogImage
             />
@@ -109,8 +113,8 @@ const Menu = () => {
                     className="menu-page"
                     style={{
                         height:
-                            window.innerWidth < 767
-                                ? window.innerHeight - height - 110
+                            width < 767
+                                ? window.innerHeight - height - 90
                                 : "unset",
                     }}
                 >
@@ -124,7 +128,7 @@ const Menu = () => {
                                         key={shortid.generate()}
                                         onClick={() =>
                                             menuItem.img &&
-                                            (window.innerWidth < 767
+                                            (width < 767
                                                 ? openPopUp(
                                                       menuItem.img,
                                                       menuItem.title,

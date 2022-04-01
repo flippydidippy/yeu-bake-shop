@@ -50,6 +50,8 @@
             white-space: nowrap;
             overflow: auto;
             position: relative;
+            align-items:flex-start;
+            display: flex;
             
 
             @include tablet {
@@ -105,7 +107,7 @@
                 p {
                     font-family: Cormorant;
                     font-weight: 600;
-                    font-size: 14px;
+                    font-size: 12px;
                     line-height: 1.2em;
                     text-align: center;
                     letter-spacing: 0.04em;
@@ -116,6 +118,14 @@
                     img {
                         width: 1em;
                         height: 1em;
+                    }
+
+                    @include small_phone {
+                        font-size: 13px;
+                    }
+
+                    @include medium_phone {
+                        font-size: 14px;
                     }
 
                     @include tablet {

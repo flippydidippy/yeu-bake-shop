@@ -49,8 +49,8 @@ const BakeMenuPage = () => {
             <Helm
                 title="Bake Menu - Yeu Bake Shop"
                 ogTitle="Bake Menu - Yeu Bake Shop"
-                description=""
-                ogDescription=""
+                description="A menu of the bakes available this week."
+                ogDescription="A menu of the bakes available this week."
                 link="/bake-menu"
                 ogImage
             />

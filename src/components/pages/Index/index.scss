@@ -100,7 +100,7 @@
         .bake-menu {
             width: 75%;
             margin: 0 auto;
-            margin-bottom: 92px;
+            margin-bottom: 0px;
 
             &-cards {
                 width: 100%;
@@ -112,7 +112,7 @@
         .bake-menu {
             width: 66.6%;
             margin: 0 auto;
-            margin-bottom: 92px;
+            margin-bottom: 48px;
 
             &-cards {
                 width: 100%;
@@ -124,7 +124,8 @@
         
         .title-section {
             order: 0;
-            margin-top: -2em;
+            margin-top: 0;
+            margin-bottom: 1em;
         }
         .bake-menu {
             order: 1;

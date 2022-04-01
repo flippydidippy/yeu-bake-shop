@@ -32,8 +32,8 @@ const OpeningHours = () => {
             <Helm
                 title="Opening Hours - Yeu Bake Shop"
                 ogTitle="Opening Hours - Yeu Bake Shop"
-                description="Here you can find a list of our Opening Hours at Yeu Bake Shop."
-                ogDescription="Here you can find a list of our Opening Hours at Yeu Bake Shop."
+                description="OPEN THURSDAY - SUNDAY THIS WEEK. Here you can find a list of our Opening Hours at Yeu Bake Shop."
+                ogDescription="OPEN THURSDAY - SUNDAY THIS WEEK. Here you can find a list of our Opening Hours at Yeu Bake Shop."
                 link="/opening-hours"
                 ogImage
             />

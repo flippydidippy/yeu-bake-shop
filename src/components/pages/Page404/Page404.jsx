@@ -7,8 +7,8 @@ const Page404 = () => {
             <Helm
                 title="404 - Yeu Bake Shop"
                 ogTitle="404 - Yeu Bake Shop"
-                description=""
-                ogDescription=""
+                description="404 error"
+                ogDescription="404 error"
                 link
                 ogImage
             />

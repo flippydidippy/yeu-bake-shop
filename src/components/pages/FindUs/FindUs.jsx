@@ -11,8 +11,8 @@ const FindUs = () => {
             <Helm
                 title="Find Us - Yeu Bake Shop"
                 ogTitle="Find Us - Yeu Bake Shop"
-                description=""
-                ogDescription=""
+                description="📍 Vikingagatan 10, Stockholm. Directions. Press the links below to get directions."
+                ogDescription="📍 Vikingagatan 10, Stockholm. Directions. Press the links below to get directions."
                 link="/find-us"
                 ogImage
             />

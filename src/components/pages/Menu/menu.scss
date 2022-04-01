@@ -163,7 +163,7 @@
             width: 100vw;
         }
 
-        @include small_height {
+        @media (max-height: 680px) {
             display: none;
         }
     }
@@ -180,6 +180,10 @@
         transform: translateX(-50%);
 
         z-index: 100;
+
+        @include medium-height {
+            top: -50px;
+        }
 
         @include tablet {
             top: 0px;

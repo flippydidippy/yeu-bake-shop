@@ -12,8 +12,8 @@ const Contact = () => {
             <Helm
                 title="Contact - Yeu Bake Shop"
                 ogTitle="Contact - Yeu Bake Shop"
-                description=""
-                ogDescription=""
+                description="Follow us on social media. Instagram: @yeubakeshop. Facebook: @yeubakeshop"
+                ogDescription="Follow us on social media. Instagram: @yeubakeshop. Facebook: @yeubakeshop"
                 link="/bake-menu"
                 ogImage
             />

@@ -47,8 +47,8 @@ const Index = () => {
         <Helm
                 title="Yeu Bake Shop"
                 ogTitle="Yeu Bake Shop"
-                description=""
-                ogDescription=""
+                description="A one woman-owned local café! Homemade with love. Milk tea, fruit ades and iced tea, coffee. Vegan options! OPEN THURSDAY - SUNDAY THIS WEEK"
+                ogDescription="A one woman-owned local café! Homemade with love. Milk tea, fruit ades and iced tea, coffee. Vegan options! OPEN THURSDAY - SUNDAY THIS WEEK"
                 link="/"
                 ogImage
             />

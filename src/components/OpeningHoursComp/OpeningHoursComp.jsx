@@ -8,8 +8,9 @@ var date = new Date().getDate(); //To get the Current Date
 var month = new Date().getMonth() + 1; //To get the Current Month
 var year = new Date().getFullYear(); //To get the Current Year
 
+
 function checkWeekDay(d, m, y) {
-    var weekDay = new Date(y, m, d).getDay();
+    var weekDay = new Date(m + " " + d + " " + y).getDay();
 
     if(weekDay === 0) {
         weekDay=6;

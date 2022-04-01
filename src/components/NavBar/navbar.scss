@@ -10,6 +10,10 @@
 
         background-color: white;
 
+        @include medium-height {
+            max-height: 80px;
+        }
+
         &-box {
             margin: 20px 20px 0px;
             display: flex;
@@ -17,6 +21,11 @@
             align-items: center;
             position: relative;
             height: 100%;
+
+            @include medium-height {
+                margin:10px 10px 0;
+                
+            }
 
             .icon {
                 img {
@@ -120,6 +129,10 @@
 
     .space {
         height: 110px;
+
+        @include medium-height {
+            height: 75px;
+        }
     }
 }
 
